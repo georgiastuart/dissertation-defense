@@ -20011,7 +20011,7 @@ html * {
  *********************************************/
 
 :root {
-  --background-color: white;
+  --background-color: #f5f5f5;
   --main-font: Lato, sans-serif;
   --main-font-size: 40px;
   --main-color: #586e75;
@@ -20030,15 +20030,15 @@ html * {
   --heading3-size: 1.55em;
   --heading4-size: 1em;
   --code-font: monospace;
-  --link-color: #268bd2;
-  --link-color-hover: #78b9e6;
+  --link-color: #e87500;
+  --link-color-hover: #ffa84f;
   --selection-background-color: #e87500;
   --selection-color: #fff;
 }
 
 .reveal-viewport {
-  background: white;
-  background-color: white;
+  background: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .reveal {
@@ -20277,20 +20277,20 @@ html * {
  *********************************************/
 
 .reveal a {
-  color: #268bd2;
+  color: #e87500;
   text-decoration: none;
   transition: color .15s ease;
 }
 
 .reveal a:hover {
-  color: #78b9e6;
+  color: #ffa84f;
   text-shadow: none;
   border: none;
 }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #1a6091;
+  background: #9c4e00;
 }
 
 /*********************************************
@@ -20307,7 +20307,7 @@ html * {
 }
 
 .reveal a:hover .r-frame {
-  border-color: #268bd2;
+  border-color: #e87500;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
@@ -20316,7 +20316,7 @@ html * {
  *********************************************/
 
 .reveal .controls {
-  color: #268bd2;
+  color: #e87500;
 }
 
 /*********************************************
@@ -20325,7 +20325,7 @@ html * {
 
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #268bd2;
+  color: #e87500;
 }
 
 /*********************************************
@@ -20334,7 +20334,7 @@ html * {
 
 @media print {
   .backgrounds {
-    background-color: white;
+    background-color: #f5f5f5;
   }
 }
 
@@ -20362,6 +20362,10 @@ html * {
 }
 
 .reveal .controls .controls-arrow {
+  color: #e87500;
+}
+
+.emphasize-title {
   color: #e87500;
 }
 

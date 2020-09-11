@@ -57,8 +57,8 @@ $headingColor: $utdgreen;
 $headingTextShadow: none;
 //$headingMargin: 0.75rem;
 //$headingTextTransform: none;
-$backgroundColor: lighten(#F5F5F5, 20%);
-$linkColor: $blue;
+$backgroundColor: #f5f5f5;
+$linkColor: $utdorange;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: $utdorange;
 
@@ -99,5 +99,9 @@ $selectionBackgroundColor: $utdorange;
 }
 
 .reveal .controls .controls-arrow {
+	color: $utdorange;
+}
+
+.emphasize-title {
 	color: $utdorange;
 }
