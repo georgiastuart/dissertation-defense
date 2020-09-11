@@ -1,0 +1,103 @@
+/**
+ * Solarized Light theme for reveal.js.
+ * Author: Achim Staebler
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(./fonts/league-gothic/league-gothic.css);
+//@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url("https://use.typekit.net/tzo1dji.css");
+
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+$headingFont: din-2014;
+$headingFontWeight: normal;
+$utdorange:	#e87500;
+$utdgreen:	#154734;
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+$white:		#FFFFFF;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base01;
+$headingColor: $utdgreen;
+$headingTextShadow: none;
+//$headingMargin: 0.75rem;
+//$headingTextTransform: none;
+$backgroundColor: lighten(#F5F5F5, 20%);
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $utdorange;
+
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+.w-full-img {
+	max-width: 100% !important;
+}
+
+.name {
+	text-transform: none !important;
+}
+
+.reveal img {
+	max-width: 100%;
+	max-height: 100%;
+	//margin: 0;
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+.reveal .slide-number {
+	background: none;
+	color: $utdgreen;
+	font-family:din-2014;
+	font-weight: bold;
+}
+
+.reveal .controls .controls-arrow {
+	color: $utdorange;
+}
