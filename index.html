@@ -22,7 +22,7 @@
                 <div>
                     <h4>Computationally efficient methods for uncertainty quantification in seismic inversion</h4>
                     <div>
-                        <img class="plain h-48 w-full my-10 object-contain" src="images/utdlogo.png">
+                        <img class="plain h-56 w-full my-10 object-contain" src="images/utdlogo.svg">
                     </div>
                     <h5 class="name">Georgia K. Stuart</h5>
                     <small>The Department of Mathematical Sciences<br>
@@ -71,6 +71,10 @@
                     <h4>Bayes' Rule</h4>
                     <img class="ml-auto h-20" src="images/utdmonogram.png">
                 </div>
+
+            </div>
+            <div class="text-8xl" data-id="bayes">
+                \[\pi(\theta \vert D) = \frac{\pi(D \vert \theta) \cdot \pi(\theta)}{\pi(D)}\]
             </div>
         </section>
         <section>
@@ -354,6 +358,7 @@
 <script src="plugin/notes/notes.js"></script>
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/math/math.js"></script>
 <script>
     // More info about initialization & config:
     // - https://revealjs.com/initialization/
@@ -362,9 +367,13 @@
         hash: true,
         disableLayout: true,
         slideNumber: 'h',
+        math: {
+            mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+            config: 'TeX-AMS_HTML-full',
+        },
 
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath]
     });
 </script>
 </body>

@@ -161,7 +161,7 @@ gulp.task('css-themes', () => {
     return gulp.src(['./css/theme/source/*.{sass,scss}'])
         .pipe(sass())
         .pipe(postcss([
-            require('tailwindcss'),
+            require('tailwindcss')('./tailwind.config.js'),
             require('autoprefixer')
         ]))
         .pipe(gulp.dest('./dist/theme'))
@@ -279,6 +279,7 @@ gulp.task('serve', () => {
     })
 
     gulp.watch(['*.html', '*.md'], gulp.series('reload'))
+    gulp.watch('tailwind.config.js', gulp.series('css', 'reload'))
 
     gulp.watch(['js/**'], gulp.series('js', 'reload', 'test'))
 
