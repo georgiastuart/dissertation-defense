@@ -113,7 +113,45 @@ gulp.task('js-es6', () => {
         });
     });
 })
-gulp.task('js', gulp.parallel('js-es5', 'js-es6'));
+
+gulp.task('demos-es5', () => {
+    return rollup({
+        input: 'js/math_demos.js',
+        plugins: [
+            resolve(),
+            commonjs(),
+            babel( babelConfig ),
+            terser()
+        ]
+    }).then( bundle => {
+        return bundle.write({
+            name: 'Demos',
+            file: './dist/demos.js',
+            format: 'umd',
+            sourcemap: true
+        });
+    });
+})
+
+// Creates an ES module bundle
+gulp.task('demos-es6', () => {
+    return rollup({
+        input: 'js/math_demos.js',
+        plugins: [
+            resolve(),
+            commonjs(),
+            babel( babelConfigESM ),
+            terser()
+        ]
+    }).then( bundle => {
+        return bundle.write({
+            file: './dist/demos.esm.js',
+            format: 'es',
+            sourcemap: true
+        });
+    });
+})
+gulp.task('js', gulp.parallel('demos-es6', 'demos-es5','js-es5', 'js-es6'));
 
 // Creates a UMD and ES module bundle for each of our
 // built-in plugins
