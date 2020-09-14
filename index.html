@@ -12,6 +12,7 @@
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+    <link rel="stylesheet" href="https://use.typekit.net/tzo1dji.css" id="font">
 </head>
 <body>
 <div class="reveal">
@@ -94,15 +95,15 @@
 
             </div>
             <div class="container mx-auto mt-2 lg:mt-4">
-            <div class="r-stack">
-                <img src="images/bayes/bayes_1.svg" class="fragment current-visible">
-                <img src="images/bayes/bayes_2.svg" class="fragment current-visible">
-                <img src="images/bayes/bayes_3.svg" class="fragment current-visible">
-                <img src="images/bayes/bayes_4.svg" class="fragment current-visible">
-                <img src="images/bayes/bayes_5.svg" class="fragment current-visible">
-                <img src="images/bayes/bayes_6.svg" class="fragment current-visible">
-                <img src="images/bayes/bayes_7.svg" class="fragment current-visible">
-            </div>
+                <div class="r-stack">
+                    <img src="images/bayes/bayes_1.svg" class="fragment current-visible">
+                    <img src="images/bayes/bayes_2.svg" class="fragment current-visible">
+                    <img src="images/bayes/bayes_3.svg" class="fragment current-visible">
+                    <img src="images/bayes/bayes_4.svg" class="fragment current-visible">
+                    <img src="images/bayes/bayes_5.svg" class="fragment current-visible">
+                    <img src="images/bayes/bayes_6.svg" class="fragment current-visible">
+                    <img src="images/bayes/bayes_7.svg" class="fragment current-visible">
+                </div>
             </div>
         </section>
         <section>
@@ -128,7 +129,8 @@
         <section class="h-full">
             <div class="container flex mx-auto h-full items-center">
                 <div>
-                    <h2>How can we <span class="emphasize-title">reduce the computational cost</span> of MCMC methods for FWI?</h2>
+                    <h2>How can we <span class="emphasize-title">reduce the computational cost</span> of MCMC methods
+                        for FWI?</h2>
                 </div>
             </div>
         </section>
@@ -160,12 +162,37 @@
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left lg:mt-3 flex items-center">
-                    <h4>Operator Upscaling</h4>
-                    <img class="ml-auto h-20" src="images/utdmonogram.png">
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left lg:mt-3 flex items-center">
+                        <h3>Operator Upscaling</h3>
+                        <img class="ml-auto h-24" src="images/utdmonogram.png">
+                    </div>
                 </div>
+                <div class="lg:mt-4">
+                    <ul>
+                        <li>Modeling wave propagation can be <span class="emph">computationally expensive</span>.</li>
+                        <li class="lg:mt-4">We use the 2D constant-density acoustic wave equation
+                            \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]
+                        </li>
+                        <li class="lg:mt-4"><span class="emph">Operator upscaling</span> decomposes the solution into
+                            two parts:
+                            <ol>
+                                <li class="lg:mt-4"><span class="emph">Fine grid</span> problem on independent
+                                    subdomains
+                                </li>
+                                <li class="lg:mt-4">Small <span class="emph">coarse grid</span> problem over the whole
+                                    domain
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="lg:mt-4">In this upscaling technique <span
+                                class="emph">we do NOT upscale the model</span>.
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-auto">Test</div>
             </div>
         </section>
 
@@ -184,6 +211,9 @@
                     <h4>Numerical Experiment: Two-stage MCMC with Upscaling</h4>
                     <img class="ml-auto h-20" src="images/utdmonogram.png">
                 </div>
+            </div>
+            <div class="container mx-auto">
+                <img class="w-full" src="images/flat_layer/interfaces_with_posteriors.png">
             </div>
         </section>
 
@@ -226,7 +256,8 @@
         <section class="h-full">
             <div class="container flex mx-auto h-full items-center">
                 <div>
-                    <h2>The <span class="emphasize-title">random walk sampler</span> practically limits the number of unknowns we can use</h2>
+                    <h2>The <span class="emphasize-title">random walk sampler</span> practically limits the number of
+                        unknowns we can use</h2>
                 </div>
             </div>
         </section>
@@ -313,7 +344,8 @@
         <section class="h-full">
             <div class="container flex mx-auto h-full items-center">
                 <div>
-                    <h2>HMC requires <span class="emphasize-title">user-specified parameters</span> to discretize the hamiltonian dynamics</h2>
+                    <h2>HMC requires <span class="emphasize-title">user-specified parameters</span> to discretize the
+                        hamiltonian dynamics</h2>
                 </div>
             </div>
 
