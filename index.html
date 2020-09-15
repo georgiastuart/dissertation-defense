@@ -118,6 +118,19 @@
             </div>
         </section>
         <section>
+            <div class="container mx-auto">
+            <div class="flex">
+                <div class="border-b-2 border-solid w-full text-left lg:mt-3 flex items-center">
+                    <h3>Markov chain Monte Carlo (MCMC)</h3>
+                    <img class="ml-auto h-24" src="images/utdmonogram.png">
+                </div>
+            </div>
+                <div class="mt-4">
+                    <img class="w-full" src="images/mcmcflowchart.svg"></img>
+                </div>
+            </div>
+        </section>
+        <section>
             <div class="container flex mx-auto">
                 <div class="border-b-2 border-solid w-full text-left lg:mt-3 flex items-center">
                     <h4>The Problem with MCMC</h4>
@@ -290,7 +303,26 @@
                 </div>
             </div>
         </section>
-
+        <section>
+            <div class="container mx-auto">
+            <div class="flex ">
+                <div class="border-b-2 border-solid w-full text-left lg:mt-3 flex items-center">
+                    <h3>Trouble: The Random Walk Sampler</h3>
+                    <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                </div>
+            </div>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                    <div class="col-span-1">
+                    <ul >
+                        <li >In <span class="emph">theory</span>, MCMC will converge to the target distribution.</li>
+                        <li class="mt-4">In <span class="emph">practice</span>, methods based on random walk sampling (RWS) can handle
+                        a limited number of unknowns <span class="emph"> (\(<100\) in our experience)</span></li>
+                        <li class="mt-4">RWS produces samples that are highly <span class="emph">correlated</span>. </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section>
             <div class="container flex mx-auto">
                 <div class="border-b-2 border-solid w-full text-left lg:mt-3 flex items-center">
