@@ -94,8 +94,8 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container flex flex-col mx-auto">
+        <section class="h-full">
+            <div class="container flex flex-col mx-auto h-full">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center">
                         <div class="header text-2xl lg:text-5xl">Bayes' Rule</div>
@@ -200,7 +200,7 @@
                     </div>
                 </div>
                 <div class="flex flex-grow items-center">
-                    <ul class="list-disc space-y-4 lg:space-y-10">
+                    <ul class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl">
                         <li>Modeling wave propagation can be <span class="emph">computationally expensive</span>.</li>
                         <li class="lg:mt-4">We use the 2D constant-density acoustic wave equation
                             \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]
@@ -238,7 +238,7 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 h-full mt-4">
                     <div class="col-span-1 text-4xl flex flex-grow items-center">
-                        <ol class="list-disc space-y-10">
+                        <ol class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl">
                             <li>Write the acoustic wave equation as a system in space by introducing <span class="emph">acceleration, \(\vec{v}\)</span>
                                 \[\begin{align}
                                 \vec{v} &= - \nabla p \\
@@ -329,9 +329,9 @@
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4 h-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 h-full w-full">
                     <div class="col-span-1 flex flex-grow items-center">
-                        <ul class="list-disc space-y-4 lg:space-y-10">
+                        <ul class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl">
                             <li>In <span class="emph">theory</span>, MCMC will converge to the target distribution.</li>
                             <li class="mt-4">In <span class="emph">practice</span>, methods based on random walk
                                 sampling (RWS) can handle
@@ -387,11 +387,11 @@
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-full lg:gap-10">
-                    <div class="col-span-1 flex items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-full lg:gap-10 flex-grow flex">
+                    <div class="col-span-1 flex flex-grow items-center">
                         <img class="w-full my-auto" src="images/BallMesh.svg">
                     </div>
-                    <div class="col-span-1 flex items-center">
+                    <div class="col-span-1 flex flex-grow items-center">
                         <img class="w-full my-auto" src="images/hamiltonseq_full.svg">
                     </div>
                 </div>
