@@ -19,7 +19,7 @@
     <div class="slides">
         <!--				TITLE SLIDE-->
         <section class="h-full">
-            <div class="container flex mx-auto h-full items-center" id="test">
+            <div class="container flex mx-auto h-full items-center overflow-y-auto" id="test">
                 <div>
                     <h3>Computationally efficient methods for uncertainty quantification in seismic inversion</h3>
                     <div>
@@ -163,7 +163,7 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto flex flex-col h-full">
+            <div class="container mx-auto flex flex-col h-full overflow-y-auto">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left lg:mt-3 flex items-center">
                         <h3>Operator Upscaling</h3>
@@ -176,7 +176,7 @@
                         <li class="lg:mt-4">We use the 2D constant-density acoustic wave equation
                             \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]
                         </li>
-                        <li class="lg:mt-4"><span class="emph">Operator upscaling</span> decomposes the solution into
+                        <li class="lg:mt-4"><span class="emph">Operator upscaling</span><sup class="small">1</sup> decomposes the solution into
                             two parts:
                             <ol>
                                 <li class="lg:mt-4"><span class="emph">Fine grid</span> problem on independent
@@ -192,7 +192,36 @@
                         </li>
                     </ul>
                 </div>
-                <div class="mt-auto">Test</div>
+                <div class="mt-auto small text-left">(1) Vdovina et al. (2005), Korostyshevskaya and Minkoff (2006), Vdovina and Minkoff (2008) </div>
+            </div>
+        </section>
+
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left lg:mt-3 flex items-center">
+                        <h3>Operator Upscaling</h3>
+                        <img class="ml-auto h-24" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 h-full">
+                    <div class="col-span-1 text-3xl flex flex-col content-between">
+                        <ol class="">
+                            <li class="mt-4">Write the acoustic wave equation as a system in space by introducing <span class="emph">acceleration, \(\vec{v}\)</span>
+                            \[\begin{align}
+                                \vec{v} &= - \nabla p \\
+                                \frac{1}{c^2} \frac{\partial^2p}{\partial t^2}&= - \nabla \cdot \vec{v} + f
+                                \end{align}\]
+                            </li>
+                            <li class="mt-4">Solve in parallel for fine grid pressure and acceleration over each <span class="emph">independent</span> coarse block.
+                                <span class="emph">No communication</span> is required at this stage. </li>
+                            <li class="mt-4">Solve for coarse grid acceleration over the whole domain.</li>
+                        </ol>
+                    </div>
+                    <div class="col-span-1">
+
+                    </div>
+                </div>
             </div>
         </section>
 
