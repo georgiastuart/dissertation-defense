@@ -336,3 +336,12 @@ gulp.task('serve', () => {
     gulp.watch(['test/*.html'], gulp.series('test'))
 
 })
+
+gulp.task('serveprod', () => {
+    connect.server({
+        root: root,
+        port: port + 1,
+        host: '0.0.0.0',
+        livereload: false
+    })
+})
