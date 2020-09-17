@@ -610,29 +610,71 @@
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
-                    <div class="header text-2xl lg:text-5xl">Numerical Experiments: NNHMC</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+        <section class="h-full">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                        <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 flex flex-grow lg:gap-4">
+                    <div class="col-span-1 lg:col-span-2 flex flex-grow items-center">
+                        <div class="flex flex-col w-full space-y-4 lg:space-y-10">
+                            <img class="w-full" src="images/nnhmc/ref_ini_avg.svg">
+                            <div class="text-sm lg:text-xl">The initial, true, and median velocity fields for
+                                the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field mark the
+                                positions of pre-set interfaces.</div>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex flex-grow items-center">
+                        <div class="flex flex-col w-full text-lg lg:text-4xl">
+                            <ul class="list-disc space-y-4 lg:space-y-10">
+                                <li>All timings include <span class="emph">generating the training set</span> and <span class="emph">training the neural network</span>.</li>
+                                <li class="fragment">Time-per-trial <span class="emph">decreased</span> by 85%.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
-                    <div class="header text-2xl lg:text-5xl">Numerical Experiments: NNHMC</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                        <div class="header text-2xl lg:text-5xl">Results: NNHMC</div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <div class="flex flex-grow items-center">
+                    <img class="w-full" src="images/nnhmc/uq.svg">
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
-                    <div class="header text-2xl lg:text-5xl">Numerical Experiments: NNHMC</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+        <section class="h-full">
+            <div class="container flex flex-col h-full mx-auto">
+                <div class=" flex ">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                        <div class="header text-2xl lg:text-5xl">Results: NNHMC</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <div class="flex flex-grow items-center">
+                    <div class="w-full">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="col-span-1">
+                                <img class="w-full" src="images/nnhmc/posteriors.svg">
+
+                            </div>
+                            <div class="col-span-1">
+                                <img class="w-full" src="images/nnhmc/avg_model.svg">
+
+                            </div>
+                        </div>
+                        <p class="w-full text-lg lg:text-4xl">Posterior Distributions</p>
+                    </div>
                 </div>
             </div>
         </section>
