@@ -157,8 +157,12 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 h-full">
-                    <div class="flex flex-grow items-center col-span-1" id="mcmc-demo-container">
+                    <div class="flex flex-col flex-grow items-center col-span-1" id="mcmc-demo-container">
                         <div id="mcmc-demo"></div>
+                        <div class="flex justify-evenly">
+                        <button class="btn text-xl">Start</button>
+                            <button class="btn text-xl">Stop</button>
+                        </div>
                     </div>
                     <div class="flex flex-grow col-span-1 text-lg lg:text-4xl lg:items-center">
                         <ul class="flex flex-col flex-grow justify-around lg:justify-start lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
@@ -243,8 +247,8 @@
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow items-center">
-                    <ul class="ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-lg lg:text-4xl text-left">
+                <div class="flex flex-grow">
+                    <ul class="ricker-list-sm lg:ricker-list flex-col flex justify-evenly text-lg lg:text-4xl text-left">
                         <li>Modeling wave propagation can be <span class="emph">computationally expensive</span>.</li>
                         <li>We use the 2D constant-density acoustic wave equation
                             \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]

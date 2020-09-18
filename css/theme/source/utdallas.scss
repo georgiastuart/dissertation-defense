@@ -158,3 +158,12 @@ $selectionBackgroundColor: $utdorange;
     }
   }
 }
+
+button.btn {
+  color: $backgroundColor;
+  background: $utdgreen;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border: $utdgreen solid 0.25rem;
+  border-radius: 0.75rem;
+}
