@@ -105,7 +105,7 @@
                 </div>
                 <div class="flex flex-grow grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
                     <div class="col-span-1 flex flex-grow  text-lg lg:text-4xl lg:items-center">
-                        <ul class="list-disc  text-left flex flex-col flex-grow justify-around xl:justify-start xl:space-y-10  pl-8">
+                        <ul class=" text-left flex flex-col flex-grow justify-around xl:justify-start xl:space-y-10  ricker-list-sm lg:ricker-list">
                             <li>Traditional FWI methods result in a <span class="emph">single velocity field</span>.
                             </li>
                             <li>UQ methods result in <span class="emph">distributions of velocity fields</span>.</li>
@@ -161,7 +161,7 @@
                         <div id="mcmc-demo"></div>
                     </div>
                     <div class="flex flex-grow col-span-1 text-lg lg:text-4xl lg:items-center">
-                        <ul class="flex flex-col flex-grow justify-around lg:justify-start lg:space-y-16 list-disc text-left">
+                        <ul class="flex flex-col flex-grow justify-around lg:justify-start lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
                             <li><span class="emph">Deterministic</span> approaches to Bayesian FWI require <span
                                     class="emph">many assumptions</span>.
                             </li>
@@ -244,7 +244,7 @@
                     </div>
                 </div>
                 <div class="flex flex-grow items-center">
-                    <ul class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl text-left pl-10">
+                    <ul class="ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-lg lg:text-4xl text-left">
                         <li>Modeling wave propagation can be <span class="emph">computationally expensive</span>.</li>
                         <li>We use the 2D constant-density acoustic wave equation
                             \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]
@@ -282,7 +282,7 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 h-full">
                     <div class="col-span-1 text-4xl flex flex-grow items-center">
-                        <ol class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl pl-10 text-left">
+                        <ol class="list-decimal space-y-4 lg:space-y-10 text-lg lg:text-4xl pl-10 text-left">
                             <li>Write the acoustic wave equation as a system in space by introducing <span class="emph">acceleration, \(\vec{v}\)</span>
                                 \[\begin{align}
                                 \vec{v} &= - \nabla p \\
@@ -317,7 +317,7 @@
                         <img src="images/flat_layer/correlation_study.png" class="my-auto">
                     </div>
                     <div class="col-span-1 text-4xl flex flex-grow items-center">
-                        <ul class="list-disc space-y-4 lg:space-y-20 text-lg lg:text-4xl">
+                        <ul class=" ricker-list-sm lg:ricker-list space-y-4 lg:space-y-20 text-lg lg:text-4xl text-left">
                             <li>We see a <span class="emph">strong linear relationship</span> between the fine grid
                                 relative residuals
                                 and the upscaled relative residuals for a layered velocity model.
@@ -333,7 +333,7 @@
 
 
         <section class="h-full">
-            <div class="container flex flex-col mx-auto h-full overflow-y-auto">
+            <div class="container flex flex-col mx-auto h-full overflow-y-auto lg:pb-4">
 
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
@@ -342,8 +342,8 @@
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex-grow flex items-center">
-                    <img class="w-full" src="images/flat_layer/avg_velocity.png">
+                <div class="flex-grow flex bg-center bg-contain bg-no-repeat" style="background-image: url('images/flat_layer/avg_velocity.png')">
+<!--                    <img class="w-full" src="images/flat_layer/avg_velocity.png">-->
                 </div>
             </div>
         </section>
@@ -369,7 +369,7 @@
                             </div>
                         </div>
                         <div class="col-span-1 text-lg lg:text-4xl flex flex-grow items-center">
-                            <ul class="list-disc space-y-4 lg:space-y-10 ">
+                            <ul class=" ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-left ">
                                 <li class="fragment">Acceptance rate <span class="emph">increased</span> from 10% to
                                     40%.
                                 </li>
@@ -384,7 +384,7 @@
                 </div>
             </section>
             <section class="h-full">
-                <div class="container flex flex-col mx-auto h-full">
+                <div class="container flex flex-col mx-auto h-full pb-4">
 
                     <div class="flex">
                         <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
@@ -486,7 +486,7 @@
                     </div>
                     <div class="col-span-1 flex flex-grow items-center">
                         <div class="flex flex-col w-full text-lg lg:text-4xl">
-                            <ul class="list-disc space-y-4 lg:space-y-10">
+                            <ul class=" ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-left">
                                 <li>All timings include <span class="emph">generating the training set</span> and <span
                                         class="emph">training the neural network</span>.
                                 </li>
@@ -527,7 +527,7 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 h-full w-full">
                     <div class="col-span-1 flex flex-grow items-center">
-                        <ul class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl">
+                        <ul class=" ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-lg lg:text-4xl text-left">
                             <li>In <span class="emph">theory</span>, MCMC will converge to the target distribution.</li>
                             <li class="mt-4">In <span class="emph">practice</span>, methods based on random walk
                                 sampling (RWS) can handle
@@ -636,7 +636,7 @@
             <div class="container mx-auto h-full flex flex-col ">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                        <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
+                        <div class="header text-2xl lg:text-5xl">Results: NNHMC</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
@@ -654,7 +654,7 @@
                     </div>
                     <div class="col-span-1 flex flex-grow items-center ">
                         <div class="flex flex-col w-full text-lg lg:text-4xl overflow-y-auto">
-                            <ul class="list-disc space-y-4 lg:space-y-10">
+                            <ul class=" ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-left">
                                 <li>All timings include <span class="emph">generating the training set</span> and <span
                                         class="emph">training the neural network</span>.
                                 </li>
