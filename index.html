@@ -19,7 +19,7 @@
     <div class="slides">
         <!--				TITLE SLIDE-->
         <section class="h-full">
-            <div class="container flex mx-auto h-full items-center overflow-y-auto" id="test">
+            <div class="container flex mx-auto h-full items-center overflow-y-auto lg:pb-4" id="test">
                 <div>
                     <div class="header text-2xl lg:text-5xl">Computationally efficient methods for uncertainty
                         quantification in seismic inversion
@@ -37,9 +37,9 @@
         </section>
         <!--				OUTLINE -->
         <section>
-            <div class="container  mx-auto">
+            <div class="container  mx-auto overflow-y-auto lg:pb-4">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center ">
                         <div class="header text-2xl lg:text-5xl">Outline</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -47,24 +47,27 @@
             </div>
         </section>
         <section class="h-full">
-            <div class="container mx-auto flex flex-col h-full overflow-y-auto">
-            <div class="flex">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
-                    <div class="header text-2xl lg:text-5xl">Exploration Seismology</div>
-                    <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+            <div class="container mx-auto flex flex-col h-full overflow-y-auto lg:pb-4">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Exploration Seismology</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
                 </div>
-            </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 flex flex-grow">
+                <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-10 flex flex-grow">
                     <div class="col-span-1 lg:col-span-2 flex flex-grow">
-                    <div class="flex-grow bg-contain bg-no-repeat bg-center"
-                         style="background-image: url('images/SeismicExperiment_v1.svg'); "></div>
+                        <div class="flex-grow bg-contain bg-no-repeat bg-center"
+                             style="background-image: url('images/SeismicExperiment_v1.svg'); "></div>
                     </div>
                     <div class="col-span-1 flex-grow flex items-center text-lg lg:text-4xl">
-                        <ol class="list-decimal space-y-4 lg:space-y-10">
+                        <ol class="list-decimal space-y-4 lg:space-y-10 lg:pl-10 text-left">
                             <li>A <span class="emph">seismic disturbance</span>.</li>
                             <li><span class="emph">Seismic waves</span> propagating through the subsurface.</li>
-                            <li><span class="emph">Reflected seismic waves</span> created by the change in material.</li>
-                            <li><span class="emph">Geophones</span> that record the direct (red) and reflected (blue) waves. </li>
+                            <li><span class="emph">Reflected seismic waves</span> created by the change in material.
+                            </li>
+                            <li><span class="emph">Geophones</span> that record the direct (red) and reflected (blue)
+                                waves.
+                            </li>
                         </ol>
                     </div>
                 </div>
@@ -73,7 +76,7 @@
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full overflow-y-auto">
                 <div class=" flex ">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Wave Data</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -86,7 +89,7 @@
         </section>
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Full Waveform Inversion (FWI)</div>
                     <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -95,35 +98,38 @@
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Uncertainty Quantification and FWI</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
                 <div class="flex flex-grow grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
-                    <div class="col-span-1 flex flex-grow items-center text-lg lg:text-4xl">
-                        <ul class="space-y-4 lg:space-y-10">
-                            <li>Traditional FWI methods result in a <span class="emph">single velocity field</span>. </li>
-                            <li>UQ methods result in <span class="emph">distributions of velocity fields</span>. </li>
-                            <li>UQ indicates where we have <span class="emph">more or less certainty</span> about the estimate from FWI. </li>
+                    <div class="col-span-1 flex flex-grow  text-lg lg:text-4xl lg:items-center">
+                        <ul class="list-disc  text-left flex flex-col flex-grow justify-around xl:justify-start xl:space-y-10  pl-8">
+                            <li>Traditional FWI methods result in a <span class="emph">single velocity field</span>.
+                            </li>
+                            <li>UQ methods result in <span class="emph">distributions of velocity fields</span>.</li>
+                            <li>UQ indicates where we have <span class="emph">more or less certainty</span> about the
+                                estimate from FWI.
+                            </li>
                         </ul>
                     </div>
-                <div class="col-span-1 lg:col-span-2 flex flex-grow">
-                <div class="flex flex-grow items-center justify-center">
-                    <div class="r-stack">
-                        <img src="images/uq_animation/uq_0.gif" class="fragment visible w-full">
-                        <img src="images/uq_animation/uq_1.gif" class="fragment current-visible w-full">
-                        <img src="images/uq_animation/uq_2.gif" class="fragment current-visible w-full">
+                    <div class="col-span-1 lg:col-span-2 flex flex-grow">
+                        <div class="flex flex-grow items-center justify-center">
+                            <div class="r-stack">
+                                <img src="images/uq_animation/uq_0.gif" class="fragment visible w-full">
+                                <img src="images/uq_animation/uq_1.gif" class="fragment current-visible w-full">
+                                <img src="images/uq_animation/uq_2.gif" class="fragment current-visible w-full">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </div>
                 </div>
             </div>
         </section>
         <section class="h-full">
             <div class="container flex flex-col mx-auto h-full">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Bayes' Rule</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -145,7 +151,7 @@
         <section class="h-full">
             <div class="container flex flex-col mx-auto h-full">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Markov chain Monte Carlo (MCMC)</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -154,12 +160,16 @@
                     <div class="flex flex-grow items-center col-span-1" id="mcmc-demo-container">
                         <div id="mcmc-demo"></div>
                     </div>
-                    <div class="flex flex-grow items-center col-span-1 text-lg lg:text-4xl">
-                        <ul class="list-disc space-y-4 lg:space-y-10">
-                            <li><span class="emph">Deterministic</span> approaches to Bayesian FWI require <span class="emph">many assumptions</span>.</li>
+                    <div class="flex flex-grow col-span-1 text-lg lg:text-4xl lg:items-center">
+                        <ul class="flex flex-col flex-grow justify-around lg:justify-start lg:space-y-16 list-disc text-left">
+                            <li><span class="emph">Deterministic</span> approaches to Bayesian FWI require <span
+                                    class="emph">many assumptions</span>.
+                            </li>
                             <li><span class="emph">Stochastic</span> approaches require fewer assumptions.</li>
-                            <li><span class="emph">Markov chain Monte Carlo</span> methods sample from the posterior distribution
-                                <span class="emph">without assumptions on the shape of the distribution</span>.</li>
+                            <li><span class="emph">Markov chain Monte Carlo</span> methods sample from the posterior
+                                distribution
+                                <span class="emph">without assumptions on the shape of the distribution</span>.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -168,19 +178,19 @@
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Markov chain Monte Carlo (MCMC)</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow items-center">
-                    <img class="w-full" src="images/mcmcflowchart.svg"></img>
+                <div class="flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/mcmcflowchart.svg')">
+<!--                    <img class="w-full" src="images/mcmcflowchart.svg"></img>-->
                 </div>
             </div>
         </section>
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">The Problem with MCMC</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -200,7 +210,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Strategies</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -209,7 +219,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Two-Stage MCMC</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -218,7 +228,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Choice of Filters</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -228,21 +238,21 @@
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full overflow-y-auto">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Operator Upscaling</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
                 <div class="flex flex-grow items-center">
-                    <ul class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl">
+                    <ul class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl text-left pl-10">
                         <li>Modeling wave propagation can be <span class="emph">computationally expensive</span>.</li>
-                        <li class="lg:mt-4">We use the 2D constant-density acoustic wave equation
+                        <li>We use the 2D constant-density acoustic wave equation
                             \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]
                         </li>
                         <li><span class="emph">Operator upscaling</span><sup class="small">1</sup> decomposes the
                             solution into
                             two parts:
-                            <ol class="list-decimal ">
+                            <ol class="list-decimal pl-10 space-y-4 mt-4">
                                 <li><span class="emph">Fine grid</span> problem on independent
                                     subdomains
                                 </li>
@@ -265,14 +275,14 @@
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full overflow-y-auto">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Operator Upscaling</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 h-full">
                     <div class="col-span-1 text-4xl flex flex-grow items-center">
-                        <ol class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl">
+                        <ol class="list-disc space-y-4 lg:space-y-10 text-lg lg:text-4xl pl-10 text-left">
                             <li>Write the acoustic wave equation as a system in space by introducing <span class="emph">acceleration, \(\vec{v}\)</span>
                                 \[\begin{align}
                                 \vec{v} &= - \nabla p \\
@@ -296,7 +306,7 @@
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full overflow-y-auto">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">upscaling and fine grid correlation</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -326,7 +336,7 @@
             <div class="container flex flex-col mx-auto h-full overflow-y-auto">
 
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Upscaling
                         </div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
@@ -343,7 +353,7 @@
                 <div class="container flex flex-col mx-auto h-full overflow-y-auto">
 
                     <div class="flex">
-                        <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                        <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                             <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Upscaling
                             </div>
                             <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
@@ -352,14 +362,19 @@
                     <div class="grid grid-cols-1 lg:grid-cols-3 h-full">
                         <div class="flex flex-grow items-center col-span-1 lg:col-span-2">
                             <div class="flex-col">
-                            <img class="w-full" src="images/flat_layer/interfaces_with_posteriors.png">
-                            <div class="text-sm lg:text-lg">A comparison between one-stage MCMC highest posterior density (HPD) intervals and two-stage MCMC HPD intervals.</div>
+                                <img class="w-full" src="images/flat_layer/interfaces_with_posteriors.png">
+                                <div class="text-sm lg:text-lg">A comparison between one-stage MCMC highest posterior
+                                    density (HPD) intervals and two-stage MCMC HPD intervals.
+                                </div>
                             </div>
                         </div>
                         <div class="col-span-1 text-lg lg:text-4xl flex flex-grow items-center">
                             <ul class="list-disc space-y-4 lg:space-y-10 ">
-                                <li class="fragment">Acceptance rate <span class="emph">increased</span> from 10% to 40%.</li>
-                                <li class="fragment">Time per sample <span class="emph">decreased</span> by 22% (40% in other
+                                <li class="fragment">Acceptance rate <span class="emph">increased</span> from 10% to
+                                    40%.
+                                </li>
+                                <li class="fragment">Time per sample <span class="emph">decreased</span> by 22% (40% in
+                                    other
                                     experiments).
                                 </li>
                                 <li class="fragment">Time per rejection <span class="emph">decreased</span> by 33%.</li>
@@ -372,7 +387,7 @@
                 <div class="container flex flex-col mx-auto h-full">
 
                     <div class="flex">
-                        <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                        <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                             <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Upscaling
                             </div>
                             <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
@@ -388,7 +403,7 @@
 
         <!--        <section>-->
         <!--            <div class="container flex mx-auto">-->
-        <!--                <div class="border-b-2 border-solid w-full text-left flex items-center">-->
+        <!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
         <!--                    <div class="header text-2xl lg:text-5xl">Numerical Experiment: 2SMCMC with Upscaling</div>-->
         <!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
         <!--                </div>-->
@@ -397,7 +412,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Neural Network Filter</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -407,7 +422,7 @@
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col overflow-y-auto">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -417,7 +432,8 @@
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
                             <img class="w-full" src="images/nn/well_log.png">
                             <div class="text-sm lg:text-xl">Well log from the Midland, TX basin (blue, courtesy of
-                            <span class="emph">Pioneer Natural Resources</span> and 9-layer block (orange). </div>
+                                <span class="emph">Pioneer Natural Resources</span> and 9-layer block (orange).
+                            </div>
                         </div>
                     </div>
                     <div class="col-span-1 flex flex-grow items-center">
@@ -433,15 +449,17 @@
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
                 <div class="flex flex-grow items-center">
                     <div class="flex flex-col lg:space-y-10 space-y-4">
-                    <img class="w-full" src="images/nn/testing_set.png">
-                        <div class="text-sm lg:text-lg">The fine grid residual norm vs. neural network filter residual norm with continuous learning.</div>
+                        <img class="w-full" src="images/nn/testing_set.png">
+                        <div class="text-sm lg:text-lg">The fine grid residual norm vs. neural network filter residual
+                            norm with continuous learning.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -450,7 +468,7 @@
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col overflow-y-auto">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -460,17 +478,23 @@
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
                             <img class="w-full" src="images/nn/avg_velocity.png">
                             <div class="text-sm lg:text-xl">The initial, true, and median velocity fields for
-                            the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field mark the
-                            positions of pre-set interfaces.</div>
+                                the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field
+                                mark the
+                                positions of pre-set interfaces.
+                            </div>
                         </div>
                     </div>
                     <div class="col-span-1 flex flex-grow items-center">
                         <div class="flex flex-col w-full text-lg lg:text-4xl">
                             <ul class="list-disc space-y-4 lg:space-y-10">
-                                <li>All timings include <span class="emph">generating the training set</span> and <span class="emph">training the neural network</span>.</li>
-                                <li class="fragment">Acceptance rate <span class="emph">increased</span> from 29% to 86%.</li>
+                                <li>All timings include <span class="emph">generating the training set</span> and <span
+                                        class="emph">training the neural network</span>.
+                                </li>
+                                <li class="fragment">Acceptance rate <span class="emph">increased</span> from 29% to
+                                    86%.
+                                </li>
                                 <li class="fragment">Time-per-trial <span class="emph">decreased</span> by 65%.</li>
-                                <li class="fragment">Time-per-rejection <span class="emph">decreased</span> by 84%. </li>
+                                <li class="fragment">Time-per-rejection <span class="emph">decreased</span> by 84%.</li>
                             </ul>
                         </div>
                     </div>
@@ -481,7 +505,7 @@
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -496,7 +520,7 @@
         <section class="h-full">
             <div class="container mx-auto h-full overflow-y-auto  flex flex-col">
                 <div class="flex ">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Trouble: The Random Walk Sampler</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -532,7 +556,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Hamiltonian Monte Carlo (HMC)</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -541,7 +565,7 @@
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">The Hamiltonian</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -554,7 +578,7 @@
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col overflow-y-auto">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Hamilton's Equations</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -569,23 +593,21 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container mx-auto h-full overflow-y-auto">
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
-                    <div class="header text-2xl lg:text-5xl">HMC Flowchart</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
-                </div>
-            </div>
-                <div class="flex flex-grow items-center">
-                    <img class="w-full" src="images/hmcflowchart.svg">
+        <section class="h-full">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">HMC Flowchart</div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/hmcflowchart.svg')">
+<!--                    <img class="w-full" src="images/hmcflowchart.svg">-->
                 </div>
             </div>
         </section>
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Problem: Gradient Computation is Expensive!</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -594,7 +616,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Two-Stage Hamiltonian Monte Carlo</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -603,7 +625,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Neural Network-Enhanced Two-Stage HMC (NNHMC)</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -611,26 +633,31 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col overflow-y-auto">
+            <div class="container mx-auto h-full flex flex-col ">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left  flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 flex flex-grow lg:gap-4">
-                    <div class="col-span-1 lg:col-span-2 flex flex-grow items-center">
-                        <div class="flex flex-col w-full space-y-4 lg:space-y-10">
-                            <img class="w-full" src="images/nnhmc/ref_ini_avg.svg">
+                    <div class="col-span-1 lg:col-span-2 flex flex-grow">
+                        <div class="flex flex-col flex-grow w-full space-y-4 lg:space-y-10">
+                            <div class="flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/nnhmc/ref_ini_avg.svg')"></div>
+<!--                            <img class="w-full" src="images/nnhmc/ref_ini_avg.svg">-->
                             <div class="text-sm lg:text-xl">The initial, true, and median velocity fields for
-                                the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field mark the
-                                positions of pre-set interfaces.</div>
+                                the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field
+                                mark the
+                                positions of pre-set interfaces.
+                            </div>
                         </div>
                     </div>
-                    <div class="col-span-1 flex flex-grow items-center">
-                        <div class="flex flex-col w-full text-lg lg:text-4xl">
+                    <div class="col-span-1 flex flex-grow items-center ">
+                        <div class="flex flex-col w-full text-lg lg:text-4xl overflow-y-auto">
                             <ul class="list-disc space-y-4 lg:space-y-10">
-                                <li>All timings include <span class="emph">generating the training set</span> and <span class="emph">training the neural network</span>.</li>
+                                <li>All timings include <span class="emph">generating the training set</span> and <span
+                                        class="emph">training the neural network</span>.
+                                </li>
                                 <li class="fragment">Time-per-trial <span class="emph">decreased</span> by 85%.</li>
                             </ul>
                         </div>
@@ -642,7 +669,7 @@
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: NNHMC</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -656,7 +683,7 @@
         <section class="h-full">
             <div class="container flex flex-col h-full mx-auto">
                 <div class=" flex ">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: NNHMC</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -693,7 +720,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">The No-U-Turn Sampler (NUTS)</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -702,7 +729,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">The No-U-Turn Sampler</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -712,13 +739,12 @@
         <section class="h-full">
             <div class="container flex flex-col mx-auto h-full">
                 <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Numerical Experiment: NUTS</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow items-center">
-                    <img class="w-full" src="images/nuts/ref_ini_avg.svg">
+                <div class="flex flex-grow bg-contain bg-no-repeat bg-center" style="background-image: url('images/nuts/ref_ini_avg.svg')">
                 </div>
             </div>
         </section>
@@ -727,24 +753,22 @@
             <div class="container flex flex-col h-full mx-auto">
 
                 <div class=" flex ">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Numerical Experiment: NUTS</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow items-center">
-                    <div class="w-full">
-                        <img class="w-full" src="images/nuts/uq.svg">
-                        <p class="w-full text-lg lg:text-4xl">Vertical slices with HPD intervals</p>
-                    </div>
+                <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/nuts/uq.svg')">
+
                 </div>
+                <p class="w-full text-lg lg:text-4xl">Vertical slices with HPD intervals</p>
             </div>
         </section>
 
         <section class="h-full">
             <div class="container flex flex-col h-full mx-auto">
                 <div class=" flex ">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Numerical Experiment: NUTS</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
@@ -769,7 +793,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Conclusions</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -778,7 +802,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Future Work</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
@@ -787,7 +811,7 @@
 
         <section>
             <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Acknowledgements</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>

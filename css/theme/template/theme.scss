@@ -95,38 +95,38 @@
 	font-style: italic;
 }
 
-.reveal ol,
-.reveal dl,
-.reveal ul {
-	display: inline-block;
+//.reveal ol,
+//.reveal dl,
+//.reveal ul {
+//	display: inline-block;
+//
+//	text-align: left;
+//	margin: 0 0 0 1em;
+//}
 
-	text-align: left;
-	margin: 0 0 0 1em;
-}
-
-.reveal ol {
-	list-style-type: decimal;
-}
-
-.reveal ul {
-	list-style-type: disc;
-}
-
-.reveal ul ul {
-	list-style-type: square;
-}
-
-.reveal ul ul ul {
-	list-style-type: circle;
-}
-
-.reveal ul ul,
-.reveal ul ol,
-.reveal ol ol,
-.reveal ol ul {
-	display: block;
-	margin-left: 40px;
-}
+//.reveal ol {
+//	list-style-type: decimal;
+//}
+//
+//.reveal ul {
+//	list-style-type: disc;
+//}
+//
+//.reveal ul ul {
+//	list-style-type: square;
+//}
+//
+//.reveal ul ul ul {
+//	list-style-type: circle;
+//}
+//
+//.reveal ul ul,
+//.reveal ul ol,
+//.reveal ol ol,
+//.reveal ol ul {
+//	display: block;
+//	margin-left: 40px;
+//}
 
 .reveal dt {
 	font-weight: bold;
