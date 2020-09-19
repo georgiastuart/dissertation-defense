@@ -148,37 +148,7 @@
                 </div>
             </div>
         </section>
-        <section class="h-full">
-            <div class="container flex flex-col mx-auto h-full">
-                <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                        <div class="header text-2xl lg:text-5xl">Markov chain Monte Carlo (MCMC)</div>
-                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 h-full">
-                    <div class="flex flex-col flex-grow items-center col-span-1" id="mcmc-demo-container">
-                        <div id="mcmc-demo"></div>
-                        <div class="flex justify-evenly">
-                        <button class="btn text-xl">Start</button>
-                            <button class="btn text-xl">Stop</button>
-                        </div>
-                    </div>
-                    <div class="flex flex-grow col-span-1 text-lg lg:text-4xl lg:items-center">
-                        <ul class="flex flex-col flex-grow justify-around lg:justify-start lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
-                            <li><span class="emph">Deterministic</span> approaches to Bayesian FWI require <span
-                                    class="emph">many assumptions</span>.
-                            </li>
-                            <li><span class="emph">Stochastic</span> approaches require fewer assumptions.</li>
-                            <li><span class="emph">Markov chain Monte Carlo</span> methods sample from the posterior
-                                distribution
-                                <span class="emph">without assumptions on the shape of the distribution</span>.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full">
                 <div class="flex">
@@ -187,11 +157,46 @@
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/mcmcflowchart.svg')">
-<!--                    <img class="w-full" src="images/mcmcflowchart.svg"></img>-->
+
+                <ul class="flex flex-col flex-grow justify-around lg:justify-start lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
+                    <li><span class="emph">Deterministic</span> approaches to Bayesian FWI require <span
+                            class="emph">many assumptions</span>.
+                    </li>
+                    <li><span class="emph">Stochastic</span> approaches require fewer assumptions.</li>
+                    <li><span class="emph">Markov chain Monte Carlo</span> methods sample from the posterior
+                        distribution
+                        <span class="emph">without assumptions on the shape of the distribution</span>.
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="h-full">
+            <div class="container flex flex-col mx-auto h-full">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Markov chain Monte Carlo (MCMC)</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 h-full">
+                    <div class="flex flex-col flex-grow justify-center col-span-1" id="mcmc-demo-container">
+                        <div id="mcmc-demo"></div>
+                        <div class="flex justify-evenly">
+                        <button class="btn text-xl" id="mcmcstart">Start</button>
+                            <button class="btn text-xl" id="mcmcstop">Stop</button>
+                            <button class="btn text-xl" id="mcmcreset">Reset</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-grow col-span-1 text-lg lg:text-4xl">
+                        <div class="flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/mcmcflowchart.svg')">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
         <section>
             <div class="container flex mx-auto">
                 <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">

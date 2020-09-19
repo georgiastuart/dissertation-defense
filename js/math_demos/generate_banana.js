@@ -1,8 +1,22 @@
 import * as d3 from "d3";
-import { get_width, banana } from "./util"
+import {get_width, banana, get_half_width} from "./util"
+
+let w = get_half_width() / 4;
+let h = w;
+
+export const dim = {minX: -3, maxX: 3, minY: -1, maxY: 9};
+
+export const yScale = d3.scaleLinear()
+    .domain([dim.minY, dim.maxY])
+    .range([h, 0]);
+
+export const xScale = d3.scaleLinear()
+    .domain([dim.minX, dim.maxX])
+    .range([0, w]);
+
 
 export default function () {
-    let w = get_width() / 8;
+    let w = get_half_width() / 4;
     let h = w;
 
     let n = w;
@@ -11,11 +25,17 @@ export default function () {
 
     console.log(values.length);
 
-    for (var j = 0.5, k = 0; j < m; ++j) {
-        for (var i = 0.5; i < n; ++i, ++k) {
-            values[k] = banana(9 - j / m * 10, i / n * 6 - 3);
+    for (let j = 0.5, k = 0; j < m; j++) {
+        for (let i = 0.5; i < n; i++, k++) {
+            values[k] = banana((m - j) / m * (dim.maxY - dim.minY) + dim.minY, i / n * (dim.maxX - dim.minX) + dim.minX)
         }
     }
+
+    // for (var j = 0.5, k = 0; j < m; ++j) {
+    //     for (var i = 0.5; i < n; ++i, ++k) {
+    //         values[k] = banana(9 - j / m * 10, -(i / n * 6 - 3));
+    //     }
+    // }
 
 
 
