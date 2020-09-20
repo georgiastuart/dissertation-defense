@@ -551,7 +551,7 @@
                                  style="background-image: url('images/nn/ref.png')"></div>
 
                             <!--                            <img class="w-full" src="images/nn/ref.png">-->
-                            <div class="caption">Flat layered experimental setup (Stuart et al. 2019a)</div>
+                            <div class="caption">Flat layered experimental setup with nine unknowns<br>(Stuart et al. 2019a)</div>
                         </div>
                     </div>
                 </div>
@@ -671,11 +671,20 @@
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
+        <section class="h-full">
+            <div class="container flex flex-col h-full mx-auto">
                 <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Hamiltonian Monte Carlo (HMC)</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                </div>
+                <div class="flex flex-grow grid grid-cols-1 lg:grid-cols-2">
+                    <div class="col-span-1 flex flex-grow">
+                        <ul class="flex flex-col flex-grow justify-evenly ricker-list-sm lg:ricker-list text-lg lg:text-4xl">
+                            <li>HMC uses <span class="emph">Hamiltonian Mechanics</span> and <span class="emph">gradient information</span> of the posterior distribution to draw samples that are less correlated.</li>
+                            <li>This results in an algorithm that can handle <span class="emph">higher dimensions</span> and <span class="emph">converges in fewer samples</span>.</li>
+                        </ul>
+                    </div>
+                    <div class="col-span-1"></div>
                 </div>
             </div>
         </section>
@@ -703,7 +712,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-full lg:gap-10 flex-grow flex">
                     <div class="col-span-1 flex flex-grow">
                         <div class="flex-grow bg-center bg-contain bg-no-repeat"
-                             style="background-image: url('images/BallMesh.svg')"></div>
+                             style="background-image: url('images/hmc_animation.gif')"></div>
                         <!--                        <img class="w-full my-auto" src="images/BallMesh.svg">-->
                     </div>
                     <div class="col-span-1 flex flex-grow">
@@ -727,15 +736,15 @@
                 <ul class="ricker-list text-left text-xl lg:text-4xl flex flex-col flex-grow justify-evenly">
                     <li>The posterior distribution is embedded in the potential energy by way of the
                         <span class="emph">canonical distribution</span>.
-                        \[U(\theta) = -\log [\pi(\theta \vert D)] = -\log[\pi(\theta)\pi(D \vert \theta)]\]
-                        where \(\pi(\theta \vert D)\) is the <span class="emph">posterior distribution</span>,
-                        \(\pi(\theta)\) is the <span class="emph">prior distribution</span>, and \(\pi(D \vert \theta)\)
+                        \[U(q) = -\log [\pi(q \vert D)] = -\log[\pi(q)\pi(D \vert q)]\]
+                        where \(\pi(q \vert D)\) is the <span class="emph">posterior distribution</span>,
+                        \(\pi(q)\) is the <span class="emph">prior distribution</span>, and \(\pi(D \vert q)\)
                         is the <span class="emph">likelihood function</span>.
 
                     </li>
                     <li>For Hamilton’s equations, we need to take the <span
                             class="emph">gradient of the log likelihood</span>.
-                        \[ -\nabla \log [\pi(D \vert \theta)] = \nabla \frac{\lVert F(\theta) - D \rVert^2}{2
+                        \[ -\nabla \log [\pi(D \vert q)] = \nabla \frac{\lVert F(q) - D \rVert^2}{2
                         \sigma^2}\]
                     </li>
                 </ul>
@@ -815,7 +824,7 @@
                                  style="background-image: url('images/nnhmc/ref_ini_avg.svg')"></div>
                             <!--                            <img class="w-full" src="images/nnhmc/ref_ini_avg.svg">-->
                             <div class="caption">The initial, true, and median velocity fields for
-                                the 100-unknown neural net two-stage HMC experiment. 
+                                the 100-unknown neural net two-stage HMC experiment.
                             </div>
                         </div>
                     </div>
@@ -903,7 +912,7 @@
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 text-xl lg:text-4xl flex flex-grow">
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 text-xl lg:text-4xl flex flex-grow">
                     <div class="col-span-1 flex flex-grow">
                         <ul class="ricker-list-sm lg:ricker-list flex-grow flex-col flex justify-evenly">
                             <li>The <span class="emph">No-U-Turn Sampler (NUTS)</span> modifies HMC to have an adaptive
@@ -923,7 +932,7 @@
                         </ul>
                     </div>
                     <div class="col-span-1 flex flex-grow">
-                        <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/NutsTrajectory.svg')"></div>
+                        <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/nuts_animation.gif')"></div>
                     </div>
                 </div>
             </div>
@@ -988,11 +997,11 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 flex-grow">
                         <div class="col-span-1 flex flex-grow">
                             <div class="flex-grow bg-contain bg-center bg-no-repeat"
-                                 style="background-image: url('images/nuts/posteriors.svg')"></div>
+                                 style="background-image: url('images/nuts/posteriors_web.svg')"></div>
                         </div>
                         <div class="col-span-1 flex flex-grow">
                             <div class="flex-grow bg-contain bg-center bg-no-repeat"
-                                 style="background-image: url('images/nuts/avg_model.svg')"></div>
+                                 style="background-image: url('images/nuts/avg_model_web.svg')"></div>
 
                         </div>
                     </div>

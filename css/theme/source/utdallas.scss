@@ -29,7 +29,9 @@ html * {
 $headingFont: din-2014;
 $headingFontWeight: normal;
 $utdorange: #e87500;
-$utdgreen: #154734;
+//$utdgreen: #154734;
+$utdgreen: #008752;
+
 
 // Solarized colors
 $base03: #002b36;
@@ -174,7 +176,7 @@ button.btn {
 }
 
 .caption {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   color: $utdgreen;
   text-align: center;
 }
