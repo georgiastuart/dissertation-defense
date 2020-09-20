@@ -171,5 +171,10 @@ button.btn {
 .caption {
   font-size: 1.125rem;
   color: $utdgreen;
-  text-align: left;
+  text-align: center;
+}
+
+.attribution {
+  @extend .caption;
+  font-size: 0.75rem;
 }

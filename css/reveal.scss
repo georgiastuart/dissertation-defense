@@ -39,7 +39,7 @@ html.reveal-full-page {
 .reveal .slides section .fragment {
 	opacity: 0;
 	visibility: hidden;
-	transition: all .2s ease;
+	transition: all 0s ease;
 	will-change: opacity;
 
 	&.visible {
@@ -85,6 +85,16 @@ html.reveal-full-page {
 	&.visible {
 		opacity: 0;
 		visibility: hidden;
+	}
+}
+
+.reveal .slides section .fragment.always-show {
+	opacity: 1;
+	visibility: inherit;
+
+	&.visible {
+		opacity: 1;
+		visibility: inherit;
 	}
 }
 

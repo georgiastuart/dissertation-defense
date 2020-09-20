@@ -117,9 +117,9 @@
                     <div class="col-span-1 lg:col-span-2 flex flex-grow">
                         <div class="flex flex-grow items-center justify-center">
                             <div class="r-stack">
-                                <img src="images/uq_animation/uq_0.gif" class="fragment visible w-full">
-                                <img src="images/uq_animation/uq_1.gif" class="fragment current-visible w-full">
-                                <img src="images/uq_animation/uq_2.gif" class="fragment current-visible w-full">
+                                <img src="images/uq_animation/uq_0.gif" class="fragment always-show w-full" data-fragment-index="0">
+                                <img src="images/uq_animation/uq_1.gif" class="fragment w-full" data-fragment-index="0">
+                                <img src="images/uq_animation/uq_2.gif" class="fragment current-visible w-full" >
                             </div>
                         </div>
                     </div>
@@ -137,8 +137,8 @@
                 </div>
                 <div class="flex flex-grow items-center">
                     <div class="r-stack w-full">
-                        <img src="images/bayes/bayes_1.svg" class="fragment current-visible w-full">
-                        <img src="images/bayes/bayes_2.svg" class="fragment current-visible w-full">
+                        <img src="images/bayes/bayes_1.svg" class="fragment fade-out w-full" data-fragment-index="0">
+                        <img src="images/bayes/bayes_2.svg" class="fragment current-visible w-full" data-fragment-index="0">
                         <img src="images/bayes/bayes_3.svg" class="fragment current-visible w-full">
                         <img src="images/bayes/bayes_4.svg" class="fragment current-visible w-full">
                         <img src="images/bayes/bayes_5.svg" class="fragment current-visible w-full">
@@ -159,6 +159,34 @@
                 </div>
 
                 <ul class="flex flex-col flex-grow justify-around lg:justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
+                    <li>We assume the <span class="emph">likelihood function</span> has the form
+                        \[\pi(D \vert \theta) = \exp \left( -\frac{\lVert F(\theta) - D\rVert^2}{2 \sigma^2} \right)\]
+                        where \(F(\theta)\) is the simulated data.
+                    </li>
+                    <li>The <span class="emph">prior distribution</span> can take many forms, e.g. uniform or Gaussian.</li>
+                    <li>However, the <span class="emph">posterior is not necessarily Gaussian</span>.
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full pb-4">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Markov chain Monte Carlo (MCMC)</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 flex flex-grow">
+                    <div class="flex flex-col flex-grow col-span-1">
+                        <div class="flex-grow  bg-no-repeat bg-center bg-contain" style="background-image: url('images/dicepic.svg')"></div>
+                        <div class="attribution">Steaphan Greene / CC BY-SA. Remixed.</div>
+                    </div>
+                    <div class="flex flex-grow col-span-1 lg:col-span-2 items-center">
+                <ul class=" flex-grow space-y-4 justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
                     <li><span class="emph">Deterministic</span> approaches to Bayesian FWI require <span
                             class="emph">many assumptions</span>.
                     </li>
@@ -168,7 +196,8 @@
                         <span class="emph">without assumptions on the shape of the distribution</span>.
                     </li>
                 </ul>
-
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -190,19 +219,47 @@
                         </div>
                     </div>
                     <div class="flex flex-grow col-span-1 text-lg lg:text-4xl">
-                        <div class="flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/mcmcflowchart.svg')">
+                        <div class="r-stack flex-grow">
+                            <img src="images/mcmcflowchart_no_sim.svg" class="w-full fragment fade-out" data-fragment-index="0">
+                            <img src="images/mcmcflowchart.svg" class="w-full fragment current-visible" data-fragment-index="0">
                         </div>
+<!--                        <div class="flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/mcmcflowchart.svg')">-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">The Problem with MCMC</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full pb-4">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">The Problem with MCMC</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
                 </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 flex flex-grow">
+
+                    <div class="flex flex-grow col-span-1 lg:col-span-2 items-center">
+                        <ul class=" flex-grow space-y-4 justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
+                            <li>MCMC can take <span class="emph">many models (tens of thousands to millions)</span> to converge.
+                            </li>
+                            <li>Each model must be run through a forward simulator (<span class="emph">wave equation</span>). </li>
+                            <li>A single chain can take <span class="emph">a week or more</span> on a cluster.</li>
+                            <li>Often <span class="emph">80% to 90%</span> of the samples are rejected!</li>
+<!--                            <li>Proposed solution: use an approximate solution to <span class="emph">quickly reject unacceptable samples</span>, then-->
+<!--                                simulate on the full fine grid only if the sample is accepted using the surrogate.<sup class="small">1</sup>-->
+<!--                            </li>-->
+                        </ul>
+                    </div>
+                    <div class="flex flex-col flex-grow col-span-1">
+                        <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/trashcan.svg')"></div>
+                        <div class="attribution">GNOME Project / CC BY-SA. Remixed.</div>
+                    </div>
+                </div>
+<!--                <div class="text-sm lg:text-lg lg:text-right">(1) Efendiev et al. (2006), Christen and Fox (2005)-->
+<!--                </div>-->
             </div>
         </section>
 
@@ -226,26 +283,40 @@
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">Two-Stage MCMC</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full pb-4">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Markov chain Monte Carlo (MCMC)</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 flex flex-grow">
+                    <div class="flex flex-col flex-grow col-span-1">
+                        <div class="header pt-4">One Stage MCMC</div>
+                        <div class="flex-grow bg-no-repeat bg-center bg-contain" style="background-image: url('images/mcmcflowchartv2.svg')"></div>
+
+                    </div>
+                    <div class="flex flex-col flex-grow col-span-1">
+                        <div class="header pt-4">Two Stage MCMC</div>
+                        <div class="flex-grow bg-no-repeat bg-center bg-contain" style="background-image: url('images/twosmcmcflowchart.svg')"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">Choice of Filters</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
-                </div>
-            </div>
-        </section>
+<!--        <section>-->
+<!--            <div class="container flex mx-auto">-->
+<!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
+<!--                    <div class="header text-2xl lg:text-5xl">Choice of Filters</div>-->
+<!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
 
         <section class="h-full">
-            <div class="container mx-auto flex flex-col h-full overflow-y-auto">
+            <div class="container mx-auto flex flex-col h-full overflow-y-auto pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Operator Upscaling</div>
@@ -275,7 +346,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="text-sm lg:text-lg lg:text-right">(1) Vdovina et al. (2005), Korostyshevskaya and
+                <div class="caption">(1) Vdovina et al. (2005), Korostyshevskaya and
                     Minkoff (2006), Vdovina and Minkoff (2008)
                 </div>
             </div>
@@ -642,6 +713,22 @@
 
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                    <div class="header text-2xl lg:text-5xl">HMC Flowchart</div>
+                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                </div>
+                <div class="r-stack flex flex-grow">
+                    <img class="w-full fragment fade-out" data-fragment-index="0" src="images/leapfrog_fixed.svg">
+                    <img class="w-full fragment current-visible" data-fragment-index="0" src="images/leapfrog_labeled.svg">
+
+                    <!--                <div class=" flex-grow bg-center bg-contain bg-no-repeat fragment" style="background-image: url('/images/leapfrog_fixed.svg')"></div>-->
+<!--                <div class=" flex-grow bg-center bg-contain bg-no-repeat fragment current-visible" style="background-image: url('/images/leapfrog_labeled.svg')"></div>-->
+                </div>
+            </div>
+        </section>
+
+        <section class="h-full">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">HMC Flowchart</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
@@ -796,6 +883,8 @@
                 </div>
                 <div class="flex flex-grow bg-contain bg-no-repeat bg-center" style="background-image: url('images/nuts/ref_ini_avg.svg')">
                 </div>
+                <div class="caption pt-4">Top: the reference velocity field with markings for sources (red X's) and receivers (green triangles). Middle: The initial velocity
+                field. Bottom: the median velocity field with red lines to mark the location of the vertical slices (next slide).</div>
             </div>
         </section>
 
@@ -811,7 +900,8 @@
                 <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/nuts/uq.svg')">
 
                 </div>
-                <p class="caption">Vertical slices with HPD intervals</p>
+                <p class="caption">Vertical slices of the median (blue), reference (black), and initial (orange) velocity fields at locations shown on the previous slide.
+                    The blue shaded region marks the 95% HPD intervals</p>
             </div>
         </section>
 
@@ -856,12 +946,27 @@
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
+        <section class="h-full">
+            <div class="container flex flex-col h-full mx-auto pb-4">
+            <div class=" flex ">
                 <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Acknowledgements</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
+            </div>
+
+                <ul class="flex-grow flex flex-col justify-evenly ricker-list-sm  lg:ricker-list text-left pt-4 text-3xl">
+                    <li>Thank you to my advisers, <span class="emph">Sue Minkoff</span> and <span class="emph"> Felipe Pereira</span>. </li>
+                    <li>Thank you <span class="emph">David Lumley</span> and <span class="emph">Hejun Zhu</span> for use of the seismology group's HPC cluster.</li>
+                    <li>Thanks to <span class="emph">Chris Simmons</span> and the Ganymede cluster team for HPC support.</li>
+                    <li>Thank you to the <span class="emph">sponsors of the UT Dallas 3D+4D seismic consortium</span> for financial support and industry feedback throughout
+                        my research.</li>
+                    <li>I was also supported by the <span class="emph">Enriched Doctoral Training (EDT) Program</span>, DMS grant #1514808. </li>
+                    <li>Thank you to <span class="emph">Pioneer Natural Resources</span>, in particular <span class="emph">Rob Meek</span> and <span class="emph">Matt McChesney</span>
+                    (now at Guidon Energy) for providing well log data and industry feedback.</li>
+                    <li>Thank you to <span class="emph">Tim Ullrich</span> for supporting me and always listening to me talk about my research.</li>
+
+                </ul>
             </div>
         </section>
     </div>
