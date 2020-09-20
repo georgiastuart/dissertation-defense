@@ -150,7 +150,7 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto flex flex-col h-full">
+            <div class="container mx-auto flex flex-col h-full pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Markov chain Monte Carlo (MCMC)</div>
@@ -158,7 +158,7 @@
                     </div>
                 </div>
 
-                <ul class="flex flex-col flex-grow justify-around lg:justify-start lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
+                <ul class="flex flex-col flex-grow justify-around lg:justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
                     <li><span class="emph">Deterministic</span> approaches to Bayesian FWI require <span
                             class="emph">many assumptions</span>.
                     </li>
@@ -379,7 +379,7 @@
                         <div class="flex flex-grow items-center col-span-1 lg:col-span-2">
                             <div class="flex-col">
                                 <img class="w-full" src="images/flat_layer/interfaces_with_posteriors.png">
-                                <div class="text-sm lg:text-lg">A comparison between one-stage MCMC highest posterior
+                                <div class="caption">A comparison between one-stage MCMC highest posterior
                                     density (HPD) intervals and two-stage MCMC HPD intervals.
                                 </div>
                             </div>
@@ -436,7 +436,7 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col overflow-y-auto">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
@@ -444,17 +444,20 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 flex flex-grow lg:gap-4">
-                    <div class="col-span-1 flex flex-grow items-center">
+                    <div class="col-span-1 flex flex-grow">
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
-                            <img class="w-full" src="images/nn/well_log.png">
+                            <div class="flex-grow bg-center bg-no-repeat bg-contain" style="background-image: url('images/nn/well_log.png')"></div>
+<!--                            <img class="w-full" src="images/nn/well_log.png">-->
                             <div class="caption">Well log from the Midland, TX basin (blue, courtesy of
                                 <span class="emph">Pioneer Natural Resources</span> and 9-layer block (orange).
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-1 flex flex-grow items-center">
+                    <div class="col-span-1 flex flex-grow ">
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
-                            <img class="w-full" src="images/nn/ref.png">
+                            <div class="flex-grow bg-center bg-no-repeat bg-contain" style="background-image: url('images/nn/ref.png')"></div>
+
+                            <!--                            <img class="w-full" src="images/nn/ref.png">-->
                             <div class="caption">Flat layered experimental setup (Stuart et al. 2019a)</div>
                         </div>
                     </div>
@@ -612,6 +615,31 @@
                 </div>
             </div>
         </section>
+
+        <section class="h-full">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Hamilton's Equations and the Posterior Distribution</div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <ul class="ricker-list text-left text-xl lg:text-4xl flex flex-col flex-grow justify-evenly">
+                    <li>The posterior distribution is embedded in the potential energy by way of the
+                        <span class="emph">canonical distribution</span>.
+                        \[U(\theta) = -\log [\pi(\theta \vert D)] = -\log[\pi(\theta)\pi(D \vert \theta)]\]
+                        where \(\pi(\theta \vert D)\) is the <span class="emph">posterior distribution</span>,
+                        \(\pi(\theta)\) is the <span class="emph">prior distribution</span>, and \(\pi(D \vert \theta)\)
+                        is the <span class="emph">likelihood function</span>.
+
+                    </li>
+                    <li>For Hamilton’s equations, we need to take the <span class="emph">gradient of the log likelihood</span>.
+                    \[ -\nabla \log [\pi(D \vert \theta)] = \nabla \frac{\lVert F(\theta) - D \rVert^2}{2 \sigma^2}\]
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
