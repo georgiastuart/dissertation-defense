@@ -282,7 +282,7 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto flex flex-col h-full overflow-y-auto">
+            <div class="container mx-auto flex flex-col h-full overflow-y-auto pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Operator Upscaling</div>
@@ -305,8 +305,11 @@
                             <li>Solve for coarse grid acceleration over the whole domain.</li>
                         </ol>
                     </div>
-                    <div class="col-span-1 lg:h-full lg:flex lg:flex-col lg:items-center ">
-                        <img src="images/grid.svg" class="my-auto">
+                    <div class="col-span-1 lg:h-full lg:flex lg:flex-col ">
+                        <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/grid.svg')"></div>
+<!--                        <img src="images/grid.svg" class="my-auto">-->
+                        <div class="caption">A picture of the coarse grid (red) and coarse grid acceleration (red X's)
+                        and the fine grid (black) and fine grid unknowns (black X's: acceleration, black dots: pressure)</div>
                     </div>
                 </div>
             </div>
@@ -354,6 +357,10 @@
                 <div class="flex-grow flex bg-center bg-contain bg-no-repeat" style="background-image: url('images/flat_layer/avg_velocity.png')">
 <!--                    <img class="w-full" src="images/flat_layer/avg_velocity.png">-->
                 </div>
+                <div class="caption">A comparison of the initial velocity, true velocity, median of the posterior from one-stage MCMC,
+                and the median of the posterior distribution from two-stage MCMC. The true velocity shows the location
+                of a line of sources (red X's), receivers (green triangles), and the unknown nodes that describe the interfaces
+                (black dots). Published in Stuart (2019b).</div>
             </div>
         </section>
 
@@ -440,7 +447,7 @@
                     <div class="col-span-1 flex flex-grow items-center">
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
                             <img class="w-full" src="images/nn/well_log.png">
-                            <div class="text-sm lg:text-xl">Well log from the Midland, TX basin (blue, courtesy of
+                            <div class="caption">Well log from the Midland, TX basin (blue, courtesy of
                                 <span class="emph">Pioneer Natural Resources</span> and 9-layer block (orange).
                             </div>
                         </div>
@@ -448,7 +455,7 @@
                     <div class="col-span-1 flex flex-grow items-center">
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
                             <img class="w-full" src="images/nn/ref.png">
-                            <div class="text-sm lg:text-xl">Flat layered experimental setup (Stuart et al. 2019a)</div>
+                            <div class="caption">Flat layered experimental setup (Stuart et al. 2019a)</div>
                         </div>
                     </div>
                 </div>
@@ -466,7 +473,7 @@
                 <div class="flex flex-grow items-center">
                     <div class="flex flex-col lg:space-y-10 space-y-4">
                         <img class="w-full" src="images/nn/testing_set.png">
-                        <div class="text-sm lg:text-lg">The fine grid residual norm vs. neural network filter residual
+                        <div class="caption">The fine grid residual norm vs. neural network filter residual
                             norm with continuous learning.
                         </div>
                     </div>
@@ -486,7 +493,7 @@
                     <div class="col-span-1 lg:col-span-2 flex flex-grow items-center">
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
                             <img class="w-full" src="images/nn/avg_velocity.png">
-                            <div class="text-sm lg:text-xl">The initial, true, and median velocity fields for
+                            <div class="caption">The initial, true, and median velocity fields for
                                 the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field
                                 mark the
                                 positions of pre-set interfaces.
@@ -512,16 +519,18 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col">
+            <div class="container mx-auto h-full flex flex-col pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="w-full flex flex-grow items-center">
-                    <img class="w-full" src="images/nn/one_d_velocity.png">
+                <div class="w-full flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/nn/one_d_velocity.png')">
+<!--                    <img class="w-full" src="images/nn/one_d_velocity.png">-->
                 </div>
+                <div class="caption">A vertical slice of the initial (blue), true (orange), and median (green dashed) velocity fields. With
+                90% highest posterior density intervals.</div>
             </div>
         </section>
 
@@ -572,20 +581,19 @@
             </div>
         </section>
         <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col">
+            <div class="container mx-auto h-full flex flex-col pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">The Hamiltonian</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex items-center flex-grow">
-                    <img class="w-full" src="images/hamiltonian.svg">
+                <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/hamiltonian.svg')">
                 </div>
             </div>
         </section>
         <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col overflow-y-auto">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Hamilton's Equations</div>
@@ -593,17 +601,19 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-full lg:gap-10 flex-grow flex">
-                    <div class="col-span-1 flex flex-grow items-center">
-                        <img class="w-full my-auto" src="images/BallMesh.svg">
+                    <div class="col-span-1 flex flex-grow">
+                        <div class="flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/BallMesh.svg')"></div>
+<!--                        <img class="w-full my-auto" src="images/BallMesh.svg">-->
                     </div>
-                    <div class="col-span-1 flex flex-grow items-center">
-                        <img class="w-full my-auto" src="images/hamiltonseq_full.svg">
+                    <div class="col-span-1 flex flex-grow">
+                        <div class="flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/hamiltonseq_full.svg')"></div>
+<!--                        <img class="w-full my-auto" src="images/hamiltonseq_full.svg">-->
                     </div>
                 </div>
             </div>
         </section>
         <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col overflow-y-auto">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">HMC Flowchart</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
@@ -642,7 +652,7 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col ">
+            <div class="container mx-auto h-full flex flex-col pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: NNHMC</div>
@@ -654,7 +664,7 @@
                         <div class="flex flex-col flex-grow w-full space-y-4 lg:space-y-10">
                             <div class="flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/nnhmc/ref_ini_avg.svg')"></div>
 <!--                            <img class="w-full" src="images/nnhmc/ref_ini_avg.svg">-->
-                            <div class="text-sm lg:text-xl">The initial, true, and median velocity fields for
+                            <div class="caption">The initial, true, and median velocity fields for
                                 the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field
                                 mark the
                                 positions of pre-set interfaces.
@@ -676,41 +686,44 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto flex flex-col h-full">
+            <div class="container mx-auto flex flex-col h-full pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: NNHMC</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow items-center">
-                    <img class="w-full" src="images/nnhmc/uq.svg">
+                <div class="flex flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/nnhmc/uq.svg')">
+<!--                    <img class="w-full" src="images/nnhmc/uq.svg">-->
                 </div>
+                <div class="caption">A one-dimensional slice of the median (blue), reference (black), and initial (orange)
+                velocity fields, with 95% HPD interval shown with blue shading.</div>
             </div>
         </section>
 
         <section class="h-full">
-            <div class="container flex flex-col h-full mx-auto">
+            <div class="container flex flex-col h-full mx-auto pb-4">
                 <div class=" flex ">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: NNHMC</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow items-center">
-                    <div class="w-full">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="col-span-1">
-                                <img class="w-full" src="images/nnhmc/posteriors.svg">
+                <div class="flex flex-col flex-grow ">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 flex-grow">
+                            <div class="col-span-1 flex flex-grow">
+                                <div class="flex-grow bg-no-repeat bg-center bg-contain" style="background-image: url('images/nnhmc/posteriors.svg')"></div>
+<!--                                <img class="w-full" src="images/nnhmc/posteriors.svg">-->
 
                             </div>
-                            <div class="col-span-1">
-                                <img class="w-full" src="images/nnhmc/avg_model.svg">
+                            <div class="col-span-1 flex flex-grow">
+                                <div class="flex-grow bg-no-repeat bg-center bg-contain" style="background-image: url('images/nnhmc/avg_model_web.svg')"></div>
+
+<!--                                <img class="w-full" src="images/nnhmc/avg_model.svg">-->
 
                             </div>
                         </div>
-                        <p class="w-full text-lg lg:text-4xl">Posterior Distributions</p>
-                    </div>
+                    <p class="caption">Four representative posterior distributions (left) from the marked locations (right).</p>
                 </div>
             </div>
         </section>
@@ -746,7 +759,7 @@
         </section>
 
         <section class="h-full">
-            <div class="container flex flex-col mx-auto h-full">
+            <div class="container flex flex-col mx-auto h-full pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Numerical Experiment: NUTS</div>
@@ -759,7 +772,7 @@
         </section>
 
         <section class="h-full">
-            <div class="container flex flex-col h-full mx-auto">
+            <div class="container flex flex-col h-full mx-auto pb-4">
 
                 <div class=" flex ">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
@@ -770,7 +783,7 @@
                 <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/nuts/uq.svg')">
 
                 </div>
-                <p class="w-full text-lg lg:text-4xl">Vertical slices with HPD intervals</p>
+                <p class="caption">Vertical slices with HPD intervals</p>
             </div>
         </section>
 
@@ -782,20 +795,17 @@
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow items-center">
-                    <div class="w-full">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="col-span-1">
-                                <img class="w-full" src="images/nuts/posteriors.svg">
-
+                <div class="flex flex-grow flex-col">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 flex-grow">
+                            <div class="col-span-1 flex flex-grow">
+                                <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/nuts/posteriors.svg')"></div>
                             </div>
-                            <div class="col-span-1">
-                                <img class="w-full" src="images/nuts/avg_model.svg">
+                            <div class="col-span-1 flex flex-grow">
+                                <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/nuts/avg_model.svg')"></div>
 
                             </div>
                         </div>
-                        <p class="w-full text-lg lg:text-4xl">Posterior Distributions</p>
-                    </div>
+                        <p class="caption">Posterior Distributions</p>
                 </div>
             </div>
         </section>
