@@ -107,6 +107,9 @@ $selectionBackgroundColor: $utdorange;
 .emph {
   color: $utdorange;
 }
+.emph-grn {
+  color: $utdgreen;
+}
 
 .small {
   font-size: 1rem !important;
@@ -123,6 +126,7 @@ $selectionBackgroundColor: $utdorange;
     ul.ricker-list > li {
       padding-left: 3.5rem;
       position: relative;
+      text-align: left;
 
       &:before {
         content: '';
@@ -142,6 +146,7 @@ $selectionBackgroundColor: $utdorange;
     ul.ricker-list-sm > li {
       padding-left: 2rem;
       position: relative;
+      text-align: left;
 
       &:before {
         content: '';

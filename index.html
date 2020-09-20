@@ -117,9 +117,10 @@
                     <div class="col-span-1 lg:col-span-2 flex flex-grow">
                         <div class="flex flex-grow items-center justify-center">
                             <div class="r-stack">
-                                <img src="images/uq_animation/uq_0.gif" class="fragment always-show w-full" data-fragment-index="0">
+                                <img src="images/uq_animation/uq_0.gif" class="fragment always-show w-full"
+                                     data-fragment-index="0">
                                 <img src="images/uq_animation/uq_1.gif" class="fragment w-full" data-fragment-index="0">
-                                <img src="images/uq_animation/uq_2.gif" class="fragment current-visible w-full" >
+                                <img src="images/uq_animation/uq_2.gif" class="fragment current-visible w-full">
                             </div>
                         </div>
                     </div>
@@ -138,7 +139,8 @@
                 <div class="flex flex-grow items-center">
                     <div class="r-stack w-full">
                         <img src="images/bayes/bayes_1.svg" class="fragment fade-out w-full" data-fragment-index="0">
-                        <img src="images/bayes/bayes_2.svg" class="fragment current-visible w-full" data-fragment-index="0">
+                        <img src="images/bayes/bayes_2.svg" class="fragment current-visible w-full"
+                             data-fragment-index="0">
                         <img src="images/bayes/bayes_3.svg" class="fragment current-visible w-full">
                         <img src="images/bayes/bayes_4.svg" class="fragment current-visible w-full">
                         <img src="images/bayes/bayes_5.svg" class="fragment current-visible w-full">
@@ -163,7 +165,8 @@
                         \[\pi(D \vert \theta) = \exp \left( -\frac{\lVert F(\theta) - D\rVert^2}{2 \sigma^2} \right)\]
                         where \(F(\theta)\) is the simulated data.
                     </li>
-                    <li>The <span class="emph">prior distribution</span> can take many forms, e.g. uniform or Gaussian.</li>
+                    <li>The <span class="emph">prior distribution</span> can take many forms, e.g. uniform or Gaussian.
+                    </li>
                     <li>However, the <span class="emph">posterior is not necessarily Gaussian</span>.
                     </li>
                 </ul>
@@ -182,20 +185,21 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 flex flex-grow">
                     <div class="flex flex-col flex-grow col-span-1">
-                        <div class="flex-grow  bg-no-repeat bg-center bg-contain" style="background-image: url('images/dicepic.svg')"></div>
+                        <div class="flex-grow  bg-no-repeat bg-center bg-contain"
+                             style="background-image: url('images/dicepic.svg')"></div>
                         <div class="attribution">Steaphan Greene / CC BY-SA. Remixed.</div>
                     </div>
                     <div class="flex flex-grow col-span-1 lg:col-span-2 items-center">
-                <ul class=" flex-grow space-y-4 justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
-                    <li><span class="emph">Deterministic</span> approaches to Bayesian FWI require <span
-                            class="emph">many assumptions</span>.
-                    </li>
-                    <li><span class="emph">Stochastic</span> approaches require fewer assumptions.</li>
-                    <li><span class="emph">Markov chain Monte Carlo</span> methods sample from the posterior
-                        distribution
-                        <span class="emph">without assumptions on the shape of the distribution</span>.
-                    </li>
-                </ul>
+                        <ul class=" flex-grow space-y-4 justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
+                            <li><span class="emph">Deterministic</span> approaches to Bayesian FWI require <span
+                                    class="emph">many assumptions</span>.
+                            </li>
+                            <li><span class="emph">Stochastic</span> approaches require fewer assumptions.</li>
+                            <li><span class="emph">Markov chain Monte Carlo</span> methods sample from the posterior
+                                distribution
+                                <span class="emph">without assumptions on the shape of the distribution</span>.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -213,18 +217,20 @@
                     <div class="flex flex-col flex-grow justify-center col-span-1" id="mcmc-demo-container">
                         <div id="mcmc-demo"></div>
                         <div class="flex justify-evenly">
-                        <button class="btn text-xl" id="mcmcstart">Start</button>
+                            <button class="btn text-xl" id="mcmcstart">Start</button>
                             <button class="btn text-xl" id="mcmcstop">Stop</button>
                             <button class="btn text-xl" id="mcmcreset">Reset</button>
                         </div>
                     </div>
                     <div class="flex flex-grow col-span-1 text-lg lg:text-4xl">
                         <div class="r-stack flex-grow">
-                            <img src="images/mcmcflowchart_no_sim.svg" class="w-full fragment fade-out" data-fragment-index="0">
-                            <img src="images/mcmcflowchart.svg" class="w-full fragment current-visible" data-fragment-index="0">
+                            <img src="images/mcmcflowchart_no_sim.svg" class="w-full fragment fade-out"
+                                 data-fragment-index="0">
+                            <img src="images/mcmcflowchart.svg" class="w-full fragment current-visible"
+                                 data-fragment-index="0">
                         </div>
-<!--                        <div class="flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/mcmcflowchart.svg')">-->
-<!--                        </div>-->
+                        <!--                        <div class="flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/mcmcflowchart.svg')">-->
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -243,23 +249,27 @@
 
                     <div class="flex flex-grow col-span-1 lg:col-span-2 items-center">
                         <ul class=" flex-grow space-y-4 justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
-                            <li>MCMC can take <span class="emph">many models (tens of thousands to millions)</span> to converge.
+                            <li>MCMC can take <span class="emph">many models (tens of thousands to millions)</span> to
+                                converge.
                             </li>
-                            <li>Each model must be run through a forward simulator (<span class="emph">wave equation</span>). </li>
+                            <li>Each model must be run through a forward simulator (<span
+                                    class="emph">wave equation</span>).
+                            </li>
                             <li>A single chain can take <span class="emph">a week or more</span> on a cluster.</li>
                             <li>Often <span class="emph">80% to 90%</span> of the samples are rejected!</li>
-<!--                            <li>Proposed solution: use an approximate solution to <span class="emph">quickly reject unacceptable samples</span>, then-->
-<!--                                simulate on the full fine grid only if the sample is accepted using the surrogate.<sup class="small">1</sup>-->
-<!--                            </li>-->
+                            <!--                            <li>Proposed solution: use an approximate solution to <span class="emph">quickly reject unacceptable samples</span>, then-->
+                            <!--                                simulate on the full fine grid only if the sample is accepted using the surrogate.<sup class="small">1</sup>-->
+                            <!--                            </li>-->
                         </ul>
                     </div>
                     <div class="flex flex-col flex-grow col-span-1">
-                        <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/trashcan.svg')"></div>
+                        <div class="flex-grow bg-contain bg-center bg-no-repeat"
+                             style="background-image: url('images/trashcan.svg')"></div>
                         <div class="attribution">GNOME Project / CC BY-SA. Remixed.</div>
                     </div>
                 </div>
-<!--                <div class="text-sm lg:text-lg lg:text-right">(1) Efendiev et al. (2006), Christen and Fox (2005)-->
-<!--                </div>-->
+                <!--                <div class="text-sm lg:text-lg lg:text-right">(1) Efendiev et al. (2006), Christen and Fox (2005)-->
+                <!--                </div>-->
             </div>
         </section>
 
@@ -287,7 +297,7 @@
             <div class="container mx-auto flex flex-col h-full pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                        <div class="header text-2xl lg:text-5xl">Markov chain Monte Carlo (MCMC)</div>
+                        <div class="header text-2xl lg:text-5xl">Two-stage Markov chain Monte Carlo</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
@@ -295,25 +305,27 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 flex flex-grow">
                     <div class="flex flex-col flex-grow col-span-1">
                         <div class="header pt-4">One Stage MCMC</div>
-                        <div class="flex-grow bg-no-repeat bg-center bg-contain" style="background-image: url('images/mcmcflowchartv2.svg')"></div>
+                        <div class="flex-grow bg-no-repeat bg-center bg-contain"
+                             style="background-image: url('images/mcmcflowchartv2.svg')"></div>
 
                     </div>
                     <div class="flex flex-col flex-grow col-span-1">
-                        <div class="header pt-4">Two Stage MCMC</div>
-                        <div class="flex-grow bg-no-repeat bg-center bg-contain" style="background-image: url('images/twosmcmcflowchart.svg')"></div>
+                        <div class="header pt-4">Two-Stage MCMC</div>
+                        <div class="flex-grow bg-no-repeat bg-center bg-contain"
+                             style="background-image: url('images/twosmcmcflowchart.svg')"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-<!--        <section>-->
-<!--            <div class="container flex mx-auto">-->
-<!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
-<!--                    <div class="header text-2xl lg:text-5xl">Choice of Filters</div>-->
-<!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
+        <!--        <section>-->
+        <!--            <div class="container flex mx-auto">-->
+        <!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
+        <!--                    <div class="header text-2xl lg:text-5xl">Choice of Filters</div>-->
+        <!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </section>-->
 
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full overflow-y-auto pb-4">
@@ -377,10 +389,13 @@
                         </ol>
                     </div>
                     <div class="col-span-1 lg:h-full lg:flex lg:flex-col ">
-                        <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/grid.svg')"></div>
-<!--                        <img src="images/grid.svg" class="my-auto">-->
+                        <div class="flex flex-grow bg-center bg-contain bg-no-repeat"
+                             style="background-image: url('images/grid.svg')"></div>
+                        <!--                        <img src="images/grid.svg" class="my-auto">-->
                         <div class="caption">A picture of the coarse grid (red) and coarse grid acceleration (red X's)
-                        and the fine grid (black) and fine grid unknowns (black X's: acceleration, black dots: pressure)</div>
+                            and the fine grid (black) and fine grid unknowns (black X's: acceleration, black dots:
+                            pressure)
+                        </div>
                     </div>
                 </div>
             </div>
@@ -425,13 +440,18 @@
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex-grow flex bg-center bg-contain bg-no-repeat" style="background-image: url('images/flat_layer/avg_velocity.png')">
-<!--                    <img class="w-full" src="images/flat_layer/avg_velocity.png">-->
+                <div class="flex-grow flex bg-center bg-contain bg-no-repeat"
+                     style="background-image: url('images/flat_layer/avg_velocity.png')">
+                    <!--                    <img class="w-full" src="images/flat_layer/avg_velocity.png">-->
                 </div>
-                <div class="caption">A comparison of the initial velocity, true velocity, median of the posterior from one-stage MCMC,
-                and the median of the posterior distribution from two-stage MCMC. The true velocity shows the location
-                of a line of sources (red X's), receivers (green triangles), and the unknown nodes that describe the interfaces
-                (black dots). Published in Stuart (2019b).</div>
+                <div class="caption">A comparison of the initial velocity, true velocity, median of the posterior from
+                    one-stage MCMC,
+                    and the median of the posterior distribution from two-stage MCMC. The true velocity shows the
+                    location
+                    of a line of sources (red X's), receivers (green triangles), and the unknown nodes that describe the
+                    interfaces
+                    (black dots). Published in Stuart (2019b).
+                </div>
             </div>
         </section>
 
@@ -517,8 +537,9 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 flex flex-grow lg:gap-4">
                     <div class="col-span-1 flex flex-grow">
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
-                            <div class="flex-grow bg-center bg-no-repeat bg-contain" style="background-image: url('images/nn/well_log.png')"></div>
-<!--                            <img class="w-full" src="images/nn/well_log.png">-->
+                            <div class="flex-grow bg-center bg-no-repeat bg-contain"
+                                 style="background-image: url('images/nn/well_log.png')"></div>
+                            <!--                            <img class="w-full" src="images/nn/well_log.png">-->
                             <div class="caption">Well log from the Midland, TX basin (blue, courtesy of
                                 <span class="emph">Pioneer Natural Resources</span> and 9-layer block (orange).
                             </div>
@@ -526,7 +547,8 @@
                     </div>
                     <div class="col-span-1 flex flex-grow ">
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
-                            <div class="flex-grow bg-center bg-no-repeat bg-contain" style="background-image: url('images/nn/ref.png')"></div>
+                            <div class="flex-grow bg-center bg-no-repeat bg-contain"
+                                 style="background-image: url('images/nn/ref.png')"></div>
 
                             <!--                            <img class="w-full" src="images/nn/ref.png">-->
                             <div class="caption">Flat layered experimental setup (Stuart et al. 2019a)</div>
@@ -600,11 +622,14 @@
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="w-full flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/nn/one_d_velocity.png')">
-<!--                    <img class="w-full" src="images/nn/one_d_velocity.png">-->
+                <div class="w-full flex flex-grow bg-no-repeat bg-contain bg-center"
+                     style="background-image: url('images/nn/one_d_velocity.png')">
+                    <!--                    <img class="w-full" src="images/nn/one_d_velocity.png">-->
                 </div>
-                <div class="caption">A vertical slice of the initial (blue), true (orange), and median (green dashed) velocity fields. With
-                90% highest posterior density intervals.</div>
+                <div class="caption">A vertical slice of the initial (blue), true (orange), and median (green dashed)
+                    velocity fields. With
+                    90% highest posterior density intervals.
+                </div>
             </div>
         </section>
 
@@ -662,7 +687,8 @@
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/hamiltonian.svg')">
+                <div class="flex flex-grow bg-center bg-contain bg-no-repeat"
+                     style="background-image: url('images/hamiltonian.svg')">
                 </div>
             </div>
         </section>
@@ -676,12 +702,14 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-full lg:gap-10 flex-grow flex">
                     <div class="col-span-1 flex flex-grow">
-                        <div class="flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/BallMesh.svg')"></div>
-<!--                        <img class="w-full my-auto" src="images/BallMesh.svg">-->
+                        <div class="flex-grow bg-center bg-contain bg-no-repeat"
+                             style="background-image: url('images/BallMesh.svg')"></div>
+                        <!--                        <img class="w-full my-auto" src="images/BallMesh.svg">-->
                     </div>
                     <div class="col-span-1 flex flex-grow">
-                        <div class="flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/hamiltonseq_full.svg')"></div>
-<!--                        <img class="w-full my-auto" src="images/hamiltonseq_full.svg">-->
+                        <div class="flex-grow bg-center bg-contain bg-no-repeat"
+                             style="background-image: url('images/hamiltonseq_full.svg')"></div>
+                        <!--                        <img class="w-full my-auto" src="images/hamiltonseq_full.svg">-->
                     </div>
                 </div>
             </div>
@@ -691,7 +719,8 @@
             <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                        <div class="header text-2xl lg:text-5xl">Hamilton's Equations and the Posterior Distribution</div>
+                        <div class="header text-2xl lg:text-5xl">Hamilton's Equations and the Posterior Distribution
+                        </div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
@@ -704,8 +733,10 @@
                         is the <span class="emph">likelihood function</span>.
 
                     </li>
-                    <li>For Hamilton’s equations, we need to take the <span class="emph">gradient of the log likelihood</span>.
-                    \[ -\nabla \log [\pi(D \vert \theta)] = \nabla \frac{\lVert F(\theta) - D \rVert^2}{2 \sigma^2}\]
+                    <li>For Hamilton’s equations, we need to take the <span
+                            class="emph">gradient of the log likelihood</span>.
+                        \[ -\nabla \log [\pi(D \vert \theta)] = \nabla \frac{\lVert F(\theta) - D \rVert^2}{2
+                        \sigma^2}\]
                     </li>
                 </ul>
             </div>
@@ -719,31 +750,34 @@
                 </div>
                 <div class="r-stack flex flex-grow">
                     <img class="w-full fragment fade-out" data-fragment-index="0" src="images/leapfrog_fixed.svg">
-                    <img class="w-full fragment current-visible" data-fragment-index="0" src="images/leapfrog_labeled.svg">
+                    <img class="w-full fragment current-visible" data-fragment-index="0"
+                         src="images/leapfrog_labeled.svg">
 
                     <!--                <div class=" flex-grow bg-center bg-contain bg-no-repeat fragment" style="background-image: url('/images/leapfrog_fixed.svg')"></div>-->
-<!--                <div class=" flex-grow bg-center bg-contain bg-no-repeat fragment current-visible" style="background-image: url('/images/leapfrog_labeled.svg')"></div>-->
+                    <!--                <div class=" flex-grow bg-center bg-contain bg-no-repeat fragment current-visible" style="background-image: url('/images/leapfrog_labeled.svg')"></div>-->
                 </div>
             </div>
         </section>
 
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                        <div class="header text-2xl lg:text-5xl">HMC Flowchart</div>
-                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
-                    </div>
-                <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/hmcflowchart.svg')">
-<!--                    <img class="w-full" src="images/hmcflowchart.svg">-->
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                    <div class="header text-2xl lg:text-5xl">HMC Flowchart</div>
+                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                </div>
+                <div class="flex flex-grow bg-center bg-contain bg-no-repeat"
+                     style="background-image: url('images/hmcflowchart.svg')">
+                    <!--                    <img class="w-full" src="images/hmcflowchart.svg">-->
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">Problem: Gradient Computation is Expensive!</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+        <section class="h-full">
+            <div class="container flex mx-auto h-full items-center overflow-y-auto">
+                <div>
+                    <div class="text:4xl lg:text-7xl header">Hamiltonain Monte Carlo requires <span
+                            class="emphasize-title">numerous expensive gradient calculations</span> to produce each sample.
+                    </div>
                 </div>
             </div>
         </section>
@@ -777,12 +811,11 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 flex flex-grow lg:gap-4">
                     <div class="col-span-1 lg:col-span-2 flex flex-grow">
                         <div class="flex flex-col flex-grow w-full space-y-4 lg:space-y-10">
-                            <div class="flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/nnhmc/ref_ini_avg.svg')"></div>
-<!--                            <img class="w-full" src="images/nnhmc/ref_ini_avg.svg">-->
+                            <div class="flex-grow bg-no-repeat bg-contain bg-center"
+                                 style="background-image: url('images/nnhmc/ref_ini_avg.svg')"></div>
+                            <!--                            <img class="w-full" src="images/nnhmc/ref_ini_avg.svg">-->
                             <div class="caption">The initial, true, and median velocity fields for
-                                the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field
-                                mark the
-                                positions of pre-set interfaces.
+                                the 100-unknown neural net two-stage HMC experiment. 
                             </div>
                         </div>
                     </div>
@@ -808,11 +841,14 @@
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/nnhmc/uq.svg')">
-<!--                    <img class="w-full" src="images/nnhmc/uq.svg">-->
+                <div class="flex flex-grow bg-contain bg-center bg-no-repeat"
+                     style="background-image: url('images/nnhmc/uq.svg')">
+                    <!--                    <img class="w-full" src="images/nnhmc/uq.svg">-->
                 </div>
-                <div class="caption">A one-dimensional slice of the median (blue), reference (black), and initial (orange)
-                velocity fields, with 95% HPD interval shown with blue shading.</div>
+                <div class="caption">A one-dimensional slice of the median (blue), reference (black), and initial
+                    (orange)
+                    velocity fields, with 95% HPD interval shown with blue shading.
+                </div>
             </div>
         </section>
 
@@ -825,20 +861,23 @@
                     </div>
                 </div>
                 <div class="flex flex-col flex-grow ">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 flex-grow">
-                            <div class="col-span-1 flex flex-grow">
-                                <div class="flex-grow bg-no-repeat bg-center bg-contain" style="background-image: url('images/nnhmc/posteriors.svg')"></div>
-<!--                                <img class="w-full" src="images/nnhmc/posteriors.svg">-->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 flex-grow">
+                        <div class="col-span-1 flex flex-grow">
+                            <div class="flex-grow bg-no-repeat bg-center bg-contain"
+                                 style="background-image: url('images/nnhmc/posteriors.svg')"></div>
+                            <!--                                <img class="w-full" src="images/nnhmc/posteriors.svg">-->
 
-                            </div>
-                            <div class="col-span-1 flex flex-grow">
-                                <div class="flex-grow bg-no-repeat bg-center bg-contain" style="background-image: url('images/nnhmc/avg_model_web.svg')"></div>
-
-<!--                                <img class="w-full" src="images/nnhmc/avg_model.svg">-->
-
-                            </div>
                         </div>
-                    <p class="caption">Four representative posterior distributions (left) from the marked locations (right).</p>
+                        <div class="col-span-1 flex flex-grow">
+                            <div class="flex-grow bg-no-repeat bg-center bg-contain"
+                                 style="background-image: url('images/nnhmc/avg_model_web.svg')"></div>
+
+                            <!--                                <img class="w-full" src="images/nnhmc/avg_model.svg">-->
+
+                        </div>
+                    </div>
+                    <p class="caption">Four representative posterior distributions (left) from the marked locations
+                        (right).</p>
                 </div>
             </div>
         </section>
@@ -855,11 +894,37 @@
 
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">The No-U-Turn Sampler (NUTS)</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+        <section class="h-full">
+            <div class="container flex flex-col h-full mx-auto">
+
+                <div class=" flex ">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">The No-U-Turn Sampler (NUTS)</div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 text-xl lg:text-4xl flex flex-grow">
+                    <div class="col-span-1 flex flex-grow">
+                        <ul class="ricker-list-sm lg:ricker-list flex-grow flex-col flex justify-evenly">
+                            <li>The <span class="emph">No-U-Turn Sampler (NUTS)</span> modifies HMC to have an adaptive
+                                trajectory length \(L\).
+                            </li>
+                            <li><span class="emph">Eliminates costly tuning runs</span> for the trajectory length in the
+                                leapfrog algorithm.
+                            </li>
+                            <li>From the starting point (blue dot), we <span class="emph">we randomly select a forward trajectory</span>
+                                (yellow dot) or a
+                                <span class="emph">backward trajectory</span> (green dots).
+                            </li>
+                            <li>The number of leapfrog steps <span class="emph">doubles</span> with each recursive NUTS
+                                iteration.
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-span-1 flex flex-grow">
+                        <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/NutsTrajectory.svg')"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -881,10 +946,14 @@
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow bg-contain bg-no-repeat bg-center" style="background-image: url('images/nuts/ref_ini_avg.svg')">
+                <div class="flex flex-grow bg-contain bg-no-repeat bg-center"
+                     style="background-image: url('images/nuts/ref_ini_avg.svg')">
                 </div>
-                <div class="caption pt-4">Top: the reference velocity field with markings for sources (red X's) and receivers (green triangles). Middle: The initial velocity
-                field. Bottom: the median velocity field with red lines to mark the location of the vertical slices (next slide).</div>
+                <div class="caption pt-4">Top: the reference velocity field with markings for sources (red X's) and
+                    receivers (green triangles). Middle: The initial velocity
+                    field. Bottom: the median velocity field with red lines to mark the location of the vertical slices
+                    (next slide).
+                </div>
             </div>
         </section>
 
@@ -897,10 +966,12 @@
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/nuts/uq.svg')">
+                <div class="flex flex-grow bg-center bg-contain bg-no-repeat"
+                     style="background-image: url('images/nuts/uq.svg')">
 
                 </div>
-                <p class="caption">Vertical slices of the median (blue), reference (black), and initial (orange) velocity fields at locations shown on the previous slide.
+                <p class="caption">Vertical slices of the median (blue), reference (black), and initial (orange)
+                    velocity fields at locations shown on the previous slide.
                     The blue shaded region marks the 95% HPD intervals</p>
             </div>
         </section>
@@ -914,26 +985,37 @@
                     </div>
                 </div>
                 <div class="flex flex-grow flex-col">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 flex-grow">
-                            <div class="col-span-1 flex flex-grow">
-                                <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/nuts/posteriors.svg')"></div>
-                            </div>
-                            <div class="col-span-1 flex flex-grow">
-                                <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/nuts/avg_model.svg')"></div>
-
-                            </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 flex-grow">
+                        <div class="col-span-1 flex flex-grow">
+                            <div class="flex-grow bg-contain bg-center bg-no-repeat"
+                                 style="background-image: url('images/nuts/posteriors.svg')"></div>
                         </div>
-                        <p class="caption">Posterior Distributions</p>
+                        <div class="col-span-1 flex flex-grow">
+                            <div class="flex-grow bg-contain bg-center bg-no-repeat"
+                                 style="background-image: url('images/nuts/avg_model.svg')"></div>
+
+                        </div>
+                    </div>
+                    <p class="caption pt-4">Four representative posterior distributions (left) at the marked locations
+                        shown on the right figure.</p>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
+        <section class="h-full">
+            <div class="container h-full flex flex-col  mx-auto pb-4">
                 <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Conclusions</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
+                <ul class="ricker-list-sm lg:ricker-list flex flex-col flex-grow justify-evenly text-lg lg:text-4xl">
+                    <li>Two-stage MCMC and HMC is an effective way to quickly reject unacceptable samples and to reduce
+                        runtime of the <span class="emph">expensive MCMC and HMC procedures</span>.</li>
+                    <li><span class="emph">Operator upscaling</span> is a highly accurate surrogate that closely replicates the fine-grid receiver data.</li>
+                    <li>A <span class="emph">neural net</span> is an extremely inexpensive surrogate that can do a good job of approximating the exponent of the <span class="emph">likelihood function</span> and the <span class="emph">likelihood gradient</span>.</li>
+                    <li><span class="emph">Neural-Net Enhanced HMC</span> reduces the run-time of the HMC algorithm by <span class="emph">over 80%</span> for our experiment.</li>
+                    <li><span class="emph">The No-U-Turn sampler</span> optimizes the leapfrog trajectory length for HMC.</li>
+                </ul>
             </div>
         </section>
 
@@ -948,24 +1030,63 @@
 
         <section class="h-full">
             <div class="container flex flex-col h-full mx-auto pb-4">
-            <div class=" flex ">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">Acknowledgements</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                <div class=" flex ">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Acknowledgements</div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
                 </div>
+                <div class="header text-left pt-4">Thank you to...</div>
+                <ul class="flex-grow flex flex-col justify-evenly ricker-list-sm  lg:ricker-list text-left text-3xl">
+                    <li>my advisers, <span class="emph">Sue Minkoff</span> and <span class="emph"> Felipe Pereira</span>.
+                    </li>
+                    <li><span class="emph">David Lumley</span> and <span class="emph">Hejun Zhu</span> for use of the
+                        seismology group's HPC cluster.
+                    </li>
+                    <li><span class="emph">Chris Simmons</span> and the Ganymede cluster team for HPC support.</li>
+                    <li>the <span class="emph">sponsors of the UT Dallas 3D+4D seismic consortium</span> for financial
+                        support and industry feedback throughout
+                        my research.
+                    </li>
+                    <li> the <span class="emph">Enriched Doctoral Training (EDT) Program</span>, DMS grant #1514808.
+                    </li>
+                    <li><span class="emph">Pioneer Natural Resources</span>, in particular <span
+                            class="emph">Rob Meek</span> and <span class="emph">Matt McChesney</span>
+                        (now at Guidon Energy) for providing well log data and industry feedback.
+                    </li>
+                    <li><span class="emph">Tim Ullrich</span> for supporting me and always listening to me talk about my
+                        research.
+                    </li>
+
+                </ul>
             </div>
+        </section>
 
-                <ul class="flex-grow flex flex-col justify-evenly ricker-list-sm  lg:ricker-list text-left pt-4 text-3xl">
-                    <li>Thank you to my advisers, <span class="emph">Sue Minkoff</span> and <span class="emph"> Felipe Pereira</span>. </li>
-                    <li>Thank you <span class="emph">David Lumley</span> and <span class="emph">Hejun Zhu</span> for use of the seismology group's HPC cluster.</li>
-                    <li>Thanks to <span class="emph">Chris Simmons</span> and the Ganymede cluster team for HPC support.</li>
-                    <li>Thank you to the <span class="emph">sponsors of the UT Dallas 3D+4D seismic consortium</span> for financial support and industry feedback throughout
-                        my research.</li>
-                    <li>I was also supported by the <span class="emph">Enriched Doctoral Training (EDT) Program</span>, DMS grant #1514808. </li>
-                    <li>Thank you to <span class="emph">Pioneer Natural Resources</span>, in particular <span class="emph">Rob Meek</span> and <span class="emph">Matt McChesney</span>
-                    (now at Guidon Energy) for providing well log data and industry feedback.</li>
-                    <li>Thank you to <span class="emph">Tim Ullrich</span> for supporting me and always listening to me talk about my research.</li>
-
+        <section class="h-full">
+            <div class="container flex flex-col h-full mx-auto pb-4">
+                <div class=" flex ">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Citations</div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <ul class="flex-grow flex flex-col justify-evenly ricker-list-sm  lg:ricker-list text-left text-xl">
+                    <li><span class="emph-grn">Christen, J. A., and C. Fox</span>, 2005, <span class="emph">Markov chain Monte Carlo Using an Approximation</span>: Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America, 14, 795–810.</li>
+                    <li><span class="emph-grn">Efendiev, Y., T. Hou, and W. Luo</span>, 2006, <span class="emph">Preconditioning Markov Chain Monte Carlo Simulations Using Coarse-Scale Models</span>: SIAM Journal on Scientific Computing: A Publication of the Society for Industrial and Applied Mathematics, 28, 776–803.</li>
+                    <li><span class="emph-grn">Hoffman, M. D., and A. Gelman</span>, 2014, <span class="emph">The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo</span> : Journal of Machine Learning Research: JMLR, 15, 1593–1623.</li>
+                    <li><span class="emph-grn">Korostyshevskaya, O., and S. E. Minkoff</span>, 2006, <span class="emph">A Matrix Analysis of Operator-Based Upscaling for the Wave Equation</span>: SIAM Journal on Numerical Analysis, 44, 586–612.
+                    </li>
+                    <li><span class="emph-grn">Neal, R. M.</span>, 2011, <span class="emph">MCMC using Hamiltonian dynamics</span>, in S. Brooks, A. Gelman, G. L. Jones, and X.-L. Meng, eds., Handbook of Markov Chain Monte Carlo. Handbooks of Modern Statistical MethodsChapman & Hall / CRC, 113–162.
+                    </li>
+                    <li><span class="emph-grn">Stuart, G. K., W. Yang, S. Minkoff, and F. Pereira</span>, 2016, <span class="emph">A two-stage Markov chain Monte Carlo method for velocity estimation and uncertainty quantification</span>, in SEG Technical Program Expanded Abstracts 2016, 3682–3687.</li>
+                    <li><span class="emph-grn">Stuart, G. K., S. E. Minkoff, and F. Pereira</span>, 2019a, <span class="emph">Enhanced neural network sampling for two-stage Markov chain Monte Carlo seismic inversion</span>: SEG Technical Program Expanded Abstracts 2019, 5, 1665–1669.
+                    </li>
+                    <li><span class="emph-grn">Stuart, G. K., S. E. Minkoff, and F. Pereira</span>, 2019b, <span class="emph">A two-stage Markov chain Monte Carlo method for seismic inversion and uncertainty quantification</span>: Geophysics, 84, R1015–R1032.
+                    </li>
+                    <li><span class="emph-grn">Vdovina, T., S. E. Minkoff, and O. Korostyshevskaya</span>, 2005, <span class="emph">Operator Upscaling for the Acoustic Wave Equation: Multiscale Modeling & Simulation</span>: A SIAM Interdisciplinary Journal, 4, 1305–1338.
+                    </li>
+                    <li><span class="emph-grn">Vdovina, T., and S. Minkoff</span>, 2008, <span class="emph">An a priori error analysis of operator upscaling for the acoustic wave equation</span>: International Journal of Numerical Analysis and Modeling, 5, 543–569.
+                    </li>
                 </ul>
             </div>
         </section>
