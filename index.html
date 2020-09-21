@@ -284,14 +284,14 @@
             </div>
         </section>
 
-<!--        <section>-->
-<!--            <div class="container flex mx-auto">-->
-<!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
-<!--                    <div class="header text-2xl lg:text-5xl">Strategies</div>-->
-<!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
+        <!--        <section>-->
+        <!--            <div class="container flex mx-auto">-->
+        <!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
+        <!--                    <div class="header text-2xl lg:text-5xl">Strategies</div>-->
+        <!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </section>-->
 
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full pb-4">
@@ -538,7 +538,7 @@
                     <div class="col-span-1 flex flex-grow">
                         <div class="flex flex-col w-full space-y-4 lg:space-y-10">
                             <div class="flex-grow bg-center bg-no-repeat bg-contain"
-                                 style="background-image: url('images/nn/well_log.png')"></div>
+                                 style="background-image: url('images/nn/well_log.svg')"></div>
                             <!--                            <img class="w-full" src="images/nn/well_log.png">-->
                             <div class="caption">Well log from the Midland, TX basin (blue, courtesy of
                                 <span class="emph">Pioneer Natural Resources</span> and 9-layer block (orange).
@@ -551,7 +551,9 @@
                                  style="background-image: url('images/nn/ref.png')"></div>
 
                             <!--                            <img class="w-full" src="images/nn/ref.png">-->
-                            <div class="caption">Flat layered experimental setup with nine unknowns<br>(Stuart et al. 2019a)</div>
+                            <div class="caption">Flat layered experimental setup with nine unknowns<br>(Stuart et al.
+                                2019a)
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -568,8 +570,9 @@
                 </div>
                 <div class="flex flex-grow">
                     <div class="flex flex-col flex-grow lg:space-y-10 space-y-4">
-                        <div class="flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/nn/testing_set.png');"></div>
-<!--                        <img class="w-full" src="images/nn/testing_set.png">-->
+                        <div class="flex-grow bg-center bg-contain bg-no-repeat"
+                             style="background-image: url('images/nn/testing_set.png');"></div>
+                        <!--                        <img class="w-full" src="images/nn/testing_set.png">-->
                         <div class="caption">The fine grid residual norm vs. neural network filter residual
                             norm with continuous learning.
                         </div>
@@ -589,7 +592,8 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 flex flex-grow lg:gap-4 pt-4">
                     <div class="col-span-1 lg:col-span-2 flex flex-grow ">
                         <div class="flex flex-col flex-grow w-full space-y-4 lg:space-y-10">
-                            <div class="flex-grow bg-contain bg-no-repeat bg-center" style="background-image: url('images/nn/avg_velocity.png')"></div>
+                            <div class="flex-grow bg-contain bg-no-repeat bg-center"
+                                 style="background-image: url('images/nn/avg_velocity.png')"></div>
                             <div class="caption">The initial, true, and median velocity fields for
                                 the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field
                                 mark the
@@ -651,14 +655,18 @@
                                 sampling (RWS) can handle
                                 a limited number of unknowns <span class="emph"> (\(<100\) in our experience)</span>
                             </li>
-                            <li class="mt-4">RWS produces samples that are highly <span class="emph">correlated</span>.<sup class="small">1</sup>
+                            <li class="mt-4">RWS produces samples that are highly <span
+                                    class="emph">correlated</span>.<sup class="small">1</sup>
                             </li>
                         </ul>
                         <div class="caption">(1) Neal (2011)</div>
                     </div>
                     <div class="col-span-1 flex flex-col flex-grow">
-                        <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/hmc/mcmc.svg')"></div>
-                        <div class="caption">A view of one dimension of a 100-dimensional Gaussian sampled with HMC.</div>
+                        <div class="flex-grow bg-contain bg-center bg-no-repeat"
+                             style="background-image: url('images/hmc/mcmc.svg')"></div>
+                        <div class="caption">A view of one dimension of a 100-dimensional Gaussian sampled with
+                            Metropolis-Hastings MCMC.
+                        </div>
                     </div>
                 </div>
 
@@ -686,13 +694,19 @@
                 <div class="flex flex-grow grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
                     <div class="col-span-1 flex flex-grow">
                         <ul class="flex flex-col flex-grow justify-evenly ricker-list-sm lg:ricker-list text-lg lg:text-4xl">
-                            <li>HMC uses <span class="emph">Hamiltonian Mechanics</span> and <span class="emph">gradient information</span> of the posterior distribution to draw samples that are less correlated.</li>
-                            <li>This results in an algorithm that can handle <span class="emph">higher dimensions</span> and <span class="emph">converges in fewer samples</span>.</li>
+                            <li>HMC uses <span class="emph">Hamiltonian Mechanics</span> and <span class="emph">gradient information</span>
+                                of the posterior distribution to draw samples that are less correlated.
+                            </li>
+                            <li>This results in an algorithm that can handle <span class="emph">higher dimensions</span>
+                                and <span class="emph">converges in fewer samples</span>.
+                            </li>
                         </ul>
                     </div>
                     <div class="col-span-1 flex flex-col flex-grow">
-                        <div class="flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/hmc/hmc.svg')"></div>
-                        <div class="caption">A view of one dimension of a 100-dimensional Gaussian sampled with HMC.</div>
+                        <div class="flex-grow bg-no-repeat bg-contain bg-center"
+                             style="background-image: url('images/hmc/hmc.svg')"></div>
+                        <div class="caption">A view of one dimension of a 100-dimensional Gaussian sampled with HMC.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -725,9 +739,14 @@
                         <!--                        <img class="w-full my-auto" src="images/BallMesh.svg">-->
                     </div>
                     <div class="col-span-1 flex flex-grow">
-                        <div class="flex-grow bg-center bg-contain bg-no-repeat"
-                             style="background-image: url('images/hamiltonseq_full.svg')"></div>
-                        <!--                        <img class="w-full my-auto" src="images/hamiltonseq_full.svg">-->
+                        <!--                        <div class="flex-grow bg-center bg-contain bg-no-repeat"-->
+                        <!--                             style="background-image: url('images/hamiltonseq_full.svg')"></div>-->
+                        <div class="r-stack flex flex-grow">
+                            <img class="w-full my-auto fragment fade-out" data-fragment-index="0"
+                                 src="images/hamiltonseq_full.svg">
+                            <img class="w-full my-auto fragment current-visible" data-fragment-index="0"
+                                 src="images/hamiltonseq_reduced.svg">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -780,12 +799,19 @@
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                 <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">HMC Flowchart</div>
+                    <div class="header text-2xl lg:text-5xl">HMC Demo and Flowchart</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
-                <div class="flex flex-grow bg-center bg-contain bg-no-repeat"
-                     style="background-image: url('images/hmcflowchart.svg')">
-                    <!--                    <img class="w-full" src="images/hmcflowchart.svg">-->
+                <div class="flex flex-grow grid grid-cols-1 lg:grid-cols-2 pt-4">
+                    <div class="flex flex-grow col-span-1">
+                        <div class="flex-grow" id="hmcdemo"></div>
+                    </div>
+                    <div class="flex flex-grow col-span-1">
+                        <div class="flex flex-grow bg-center bg-contain bg-no-repeat"
+                             style="background-image: url('images/hmcflowchart_half.svg')">
+                            <!--                    <img class="w-full" src="images/hmcflowchart.svg">-->
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -794,17 +820,32 @@
             <div class="container flex mx-auto h-full items-center overflow-y-auto">
                 <div>
                     <div class="text:4xl lg:text-7xl header">Hamiltonain Monte Carlo requires <span
-                            class="emphasize-title">numerous expensive gradient calculations</span> to produce each sample.
+                            class="emphasize-title">numerous expensive gradient calculations</span> to produce each
+                        sample.
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
+        <section class="h-full">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                 <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">Two-Stage Hamiltonian Monte Carlo</div>
+                    <div class="header text-2xl lg:text-5xl">Two-Stage HMC</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                </div>
+                <div class="flex flex-grow grid grid-cols-1 lg:grid-cols-2 pt-4">
+                    <div class="flex flex-grow flex-col col-span-1">
+                        <div class="header">One-Stage HMC</div>
+                        <div class="flex flex-grow bg-center bg-contain bg-no-repeat"
+                             style="background-image: url('images/hmcflowchart_half.svg')">
+                        </div>
+                    </div>
+                    <div class="flex flex-grow flex-col col-span-1">
+                        <div class="header">Two-Stage HMC</div>
+                        <div class="flex flex-grow bg-center bg-contain bg-no-repeat"
+                             style="background-image: url('images/hmcflowchart_half_2s.svg')">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -831,8 +872,10 @@
                         <div class="flex flex-col flex-grow w-full space-y-4 lg:space-y-10">
                             <embed class="flex-grow" src="images/nnhmc/ref_ini_avg.svg">
                             <!--                            <img class="w-full" src="images/nnhmc/ref_ini_avg.svg">-->
-                            <div class="caption">The initial (left), true (middle), and median (right) velocity fields for
-                                the 100-unknown neural net two-stage HMC experiment. On the left image, red x's represent a line of sources
+                            <div class="caption">The initial (left), true (middle), and median (right) velocity fields
+                                for
+                                the 100-unknown neural net two-stage HMC experiment. On the left image, red x's
+                                represent a line of sources
                                 and green triangles represent a line of receivers.
                             </div>
                         </div>
@@ -941,20 +984,21 @@
                         </ul>
                     </div>
                     <div class="col-span-1 flex flex-grow">
-                        <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/nuts_animation.gif')"></div>
+                        <div class="flex-grow bg-contain bg-center bg-no-repeat"
+                             style="background-image: url('images/nuts_animation.gif')"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-<!--        <section>-->
-<!--            <div class="container flex mx-auto">-->
-<!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
-<!--                    <div class="header text-2xl lg:text-5xl">The No-U-Turn Sampler</div>-->
-<!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
+        <!--        <section>-->
+        <!--            <div class="container flex mx-auto">-->
+        <!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
+        <!--                    <div class="header text-2xl lg:text-5xl">The No-U-Turn Sampler</div>-->
+        <!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </section>-->
 
         <section class="h-full">
             <div class="container flex flex-col mx-auto h-full pb-4">
@@ -964,11 +1008,11 @@
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <embed class="pt-4" src="images/nuts/efficient_ref_ini_avg.svg">
+                <embed class="pt-4" src="images/nuts/ref_ini_avg.svg">
                 <div class="caption pt-4">Top: the reference velocity field with markings for sources (red X's) and
-                    receivers (green triangles). Middle: The initial velocity
-                    field. Bottom: the median velocity field with red lines to mark the location of the vertical slices
-                    (next slide).
+                    receivers (green triangles) and red lines to mark the location of the vertical slices
+                    (next slide). Middle: The initial velocity
+                    field. Bottom: the median velocity field.
                 </div>
             </div>
         </section>
@@ -1026,11 +1070,21 @@
                 </div>
                 <ul class="ricker-list-sm lg:ricker-list flex flex-col flex-grow justify-evenly text-lg lg:text-4xl">
                     <li>Two-stage MCMC and HMC is an effective way to quickly reject unacceptable samples and to reduce
-                        runtime of the <span class="emph">expensive MCMC and HMC procedures</span>.</li>
-                    <li><span class="emph">Operator upscaling</span> is a highly accurate surrogate that closely replicates the fine-grid receiver data.</li>
-                    <li>A <span class="emph">neural net</span> is an extremely inexpensive surrogate that can do a good job of approximating the exponent of the <span class="emph">likelihood function</span> and the <span class="emph">likelihood gradient</span>.</li>
-                    <li><span class="emph">Neural-Net Enhanced HMC</span> reduces the run-time of the HMC algorithm by <span class="emph">over 80%</span> for our experiment.</li>
-                    <li><span class="emph">The No-U-Turn sampler</span> optimizes the leapfrog trajectory length for HMC.</li>
+                        runtime of the <span class="emph">expensive MCMC and HMC procedures</span>.
+                    </li>
+                    <li><span class="emph">Operator upscaling</span> is a highly accurate surrogate that closely
+                        replicates the fine-grid receiver data.
+                    </li>
+                    <li>A <span class="emph">neural net</span> is an extremely inexpensive surrogate that can do a good
+                        job of approximating the exponent of the <span class="emph">likelihood function</span> and the
+                        <span class="emph">likelihood gradient</span>.
+                    </li>
+                    <li><span class="emph">Neural-Net Enhanced HMC</span> reduces the run-time of the HMC algorithm by
+                        <span class="emph">over 80%</span> for our experiment.
+                    </li>
+                    <li><span class="emph">The No-U-Turn sampler</span> optimizes the leapfrog trajectory length for
+                        HMC.
+                    </li>
                 </ul>
             </div>
         </section>
@@ -1087,21 +1141,43 @@
                     </div>
                 </div>
                 <ul class="flex-grow flex flex-col justify-evenly ricker-list-sm  lg:ricker-list text-left text-xl">
-                    <li><span class="emph-grn">Christen, J. A., and C. Fox</span>, 2005, <span class="emph">Markov chain Monte Carlo Using an Approximation</span>: Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America, 14, 795–810.</li>
-                    <li><span class="emph-grn">Efendiev, Y., T. Hou, and W. Luo</span>, 2006, <span class="emph">Preconditioning Markov Chain Monte Carlo Simulations Using Coarse-Scale Models</span>: SIAM Journal on Scientific Computing: A Publication of the Society for Industrial and Applied Mathematics, 28, 776–803.</li>
-                    <li><span class="emph-grn">Hoffman, M. D., and A. Gelman</span>, 2014, <span class="emph">The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo</span> : Journal of Machine Learning Research: JMLR, 15, 1593–1623.</li>
-                    <li><span class="emph-grn">Korostyshevskaya, O., and S. E. Minkoff</span>, 2006, <span class="emph">A Matrix Analysis of Operator-Based Upscaling for the Wave Equation</span>: SIAM Journal on Numerical Analysis, 44, 586–612.
+                    <li><span class="emph-grn">Christen, J. A., and C. Fox</span>, 2005, <span class="emph">Markov chain Monte Carlo Using an Approximation</span>:
+                        Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical
+                        Association, Institute of Mathematical Statistics, Interface Foundation of North America, 14,
+                        795–810.
                     </li>
-                    <li><span class="emph-grn">Neal, R. M.</span>, 2011, <span class="emph">MCMC using Hamiltonian dynamics</span>, in S. Brooks, A. Gelman, G. L. Jones, and X.-L. Meng, eds., Handbook of Markov Chain Monte Carlo. Handbooks of Modern Statistical MethodsChapman & Hall / CRC, 113–162.
+                    <li><span class="emph-grn">Efendiev, Y., T. Hou, and W. Luo</span>, 2006, <span class="emph">Preconditioning Markov Chain Monte Carlo Simulations Using Coarse-Scale Models</span>:
+                        SIAM Journal on Scientific Computing: A Publication of the Society for Industrial and Applied
+                        Mathematics, 28, 776–803.
                     </li>
-                    <li><span class="emph-grn">Stuart, G. K., W. Yang, S. Minkoff, and F. Pereira</span>, 2016, <span class="emph">A two-stage Markov chain Monte Carlo method for velocity estimation and uncertainty quantification</span>, in SEG Technical Program Expanded Abstracts 2016, 3682–3687.</li>
-                    <li><span class="emph-grn">Stuart, G. K., S. E. Minkoff, and F. Pereira</span>, 2019a, <span class="emph">Enhanced neural network sampling for two-stage Markov chain Monte Carlo seismic inversion</span>: SEG Technical Program Expanded Abstracts 2019, 5, 1665–1669.
+                    <li><span class="emph-grn">Hoffman, M. D., and A. Gelman</span>, 2014, <span class="emph">The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo</span>
+                        : Journal of Machine Learning Research: JMLR, 15, 1593–1623.
                     </li>
-                    <li><span class="emph-grn">Stuart, G. K., S. E. Minkoff, and F. Pereira</span>, 2019b, <span class="emph">A two-stage Markov chain Monte Carlo method for seismic inversion and uncertainty quantification</span>: Geophysics, 84, R1015–R1032.
+                    <li><span class="emph-grn">Korostyshevskaya, O., and S. E. Minkoff</span>, 2006, <span class="emph">A Matrix Analysis of Operator-Based Upscaling for the Wave Equation</span>:
+                        SIAM Journal on Numerical Analysis, 44, 586–612.
                     </li>
-                    <li><span class="emph-grn">Vdovina, T., S. E. Minkoff, and O. Korostyshevskaya</span>, 2005, <span class="emph">Operator Upscaling for the Acoustic Wave Equation: Multiscale Modeling & Simulation</span>: A SIAM Interdisciplinary Journal, 4, 1305–1338.
+                    <li><span class="emph-grn">Neal, R. M.</span>, 2011, <span class="emph">MCMC using Hamiltonian dynamics</span>,
+                        in S. Brooks, A. Gelman, G. L. Jones, and X.-L. Meng, eds., Handbook of Markov Chain Monte
+                        Carlo. Handbooks of Modern Statistical MethodsChapman & Hall / CRC, 113–162.
                     </li>
-                    <li><span class="emph-grn">Vdovina, T., and S. Minkoff</span>, 2008, <span class="emph">An a priori error analysis of operator upscaling for the acoustic wave equation</span>: International Journal of Numerical Analysis and Modeling, 5, 543–569.
+                    <li><span class="emph-grn">Stuart, G. K., W. Yang, S. Minkoff, and F. Pereira</span>, 2016, <span
+                            class="emph">A two-stage Markov chain Monte Carlo method for velocity estimation and uncertainty quantification</span>,
+                        in SEG Technical Program Expanded Abstracts 2016, 3682–3687.
+                    </li>
+                    <li><span class="emph-grn">Stuart, G. K., S. E. Minkoff, and F. Pereira</span>, 2019a, <span
+                            class="emph">Enhanced neural network sampling for two-stage Markov chain Monte Carlo seismic inversion</span>:
+                        SEG Technical Program Expanded Abstracts 2019, 5, 1665–1669.
+                    </li>
+                    <li><span class="emph-grn">Stuart, G. K., S. E. Minkoff, and F. Pereira</span>, 2019b, <span
+                            class="emph">A two-stage Markov chain Monte Carlo method for seismic inversion and uncertainty quantification</span>:
+                        Geophysics, 84, R1015–R1032.
+                    </li>
+                    <li><span class="emph-grn">Vdovina, T., S. E. Minkoff, and O. Korostyshevskaya</span>, 2005, <span
+                            class="emph">Operator Upscaling for the Acoustic Wave Equation: Multiscale Modeling & Simulation</span>:
+                        A SIAM Interdisciplinary Journal, 4, 1305–1338.
+                    </li>
+                    <li><span class="emph-grn">Vdovina, T., and S. Minkoff</span>, 2008, <span class="emph">An a priori error analysis of operator upscaling for the acoustic wave equation</span>:
+                        International Journal of Numerical Analysis and Modeling, 5, 543–569.
                     </li>
                 </ul>
             </div>
