@@ -284,14 +284,14 @@
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">Strategies</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
-                </div>
-            </div>
-        </section>
+<!--        <section>-->
+<!--            <div class="container flex mx-auto">-->
+<!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
+<!--                    <div class="header text-2xl lg:text-5xl">Strategies</div>-->
+<!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
 
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full pb-4">
@@ -559,16 +559,17 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col">
+            <div class="container mx-auto h-full flex flex-col pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow items-center">
-                    <div class="flex flex-col lg:space-y-10 space-y-4">
-                        <img class="w-full" src="images/nn/testing_set.png">
+                <div class="flex flex-grow">
+                    <div class="flex flex-col flex-grow lg:space-y-10 space-y-4">
+                        <div class="flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/nn/testing_set.png');"></div>
+<!--                        <img class="w-full" src="images/nn/testing_set.png">-->
                         <div class="caption">The fine grid residual norm vs. neural network filter residual
                             norm with continuous learning.
                         </div>
@@ -578,17 +579,17 @@
         </section>
 
         <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col overflow-y-auto">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
                         <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 flex flex-grow lg:gap-4">
-                    <div class="col-span-1 lg:col-span-2 flex flex-grow items-center">
-                        <div class="flex flex-col w-full space-y-4 lg:space-y-10">
-                            <img class="w-full" src="images/nn/avg_velocity.png">
+                <div class="grid grid-cols-1 lg:grid-cols-3 flex flex-grow lg:gap-4 pt-4">
+                    <div class="col-span-1 lg:col-span-2 flex flex-grow ">
+                        <div class="flex flex-col flex-grow w-full space-y-4 lg:space-y-10">
+                            <div class="flex-grow bg-contain bg-no-repeat bg-center" style="background-image: url('images/nn/avg_velocity.png')"></div>
                             <div class="caption">The initial, true, and median velocity fields for
                                 the neural net two-stage MCMC experiment. The dashed lines in the initial velocity field
                                 mark the
@@ -820,11 +821,11 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 flex flex-grow lg:gap-4">
                     <div class="col-span-1 lg:col-span-2 flex flex-grow">
                         <div class="flex flex-col flex-grow w-full space-y-4 lg:space-y-10">
-                            <div class="flex-grow bg-no-repeat bg-contain bg-center"
-                                 style="background-image: url('images/nnhmc/ref_ini_avg.svg')"></div>
+                            <embed class="flex-grow" src="images/nnhmc/ref_ini_avg.svg">
                             <!--                            <img class="w-full" src="images/nnhmc/ref_ini_avg.svg">-->
-                            <div class="caption">The initial, true, and median velocity fields for
-                                the 100-unknown neural net two-stage HMC experiment.
+                            <div class="caption">The initial (left), true (middle), and median (right) velocity fields for
+                                the 100-unknown neural net two-stage HMC experiment. On the left image, red x's represent a line of sources
+                                and green triangles represent a line of receivers.
                             </div>
                         </div>
                     </div>
@@ -955,9 +956,10 @@
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow bg-contain bg-no-repeat bg-center"
-                     style="background-image: url('images/nuts/ref_ini_avg.svg')">
-                </div>
+<!--                <div class="flex flex-grow bg-contain bg-no-repeat bg-center"-->
+<!--                     style="background-image: url('images/nuts/ref_ini_avg.svg')">-->
+<!--                </div>-->
+                <embed class="pt-4" src="images/nuts/efficient_ref_ini_avg.svg">
                 <div class="caption pt-4">Top: the reference velocity field with markings for sources (red X's) and
                     receivers (green triangles). Middle: The initial velocity
                     field. Bottom: the median velocity field with red lines to mark the location of the vertical slices
