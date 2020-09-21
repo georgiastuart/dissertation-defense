@@ -636,27 +636,32 @@
 
 
         <section class="h-full">
-            <div class="container mx-auto h-full overflow-y-auto  flex flex-col">
+            <div class="container mx-auto h-full overflow-y-auto  flex flex-col pb-4">
                 <div class="flex ">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Trouble: The Random Walk Sampler</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 h-full w-full">
-                    <div class="col-span-1 flex flex-grow items-center">
-                        <ul class=" ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-lg lg:text-4xl text-left">
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 h-full w-full">
+                    <div class="col-span-1 flex flex-col flex-grow">
+                        <ul class="flex-grow flex flex-col ricker-list-sm justify-evenly lg:ricker-list space-y-4 lg:space-y-10 text-lg lg:text-4xl text-left">
                             <li>In <span class="emph">theory</span>, MCMC will converge to the target distribution.</li>
                             <li class="mt-4">In <span class="emph">practice</span>, methods based on random walk
                                 sampling (RWS) can handle
                                 a limited number of unknowns <span class="emph"> (\(<100\) in our experience)</span>
                             </li>
-                            <li class="mt-4">RWS produces samples that are highly <span class="emph">correlated</span>.
+                            <li class="mt-4">RWS produces samples that are highly <span class="emph">correlated</span>.<sup class="small">1</sup>
                             </li>
                         </ul>
+                        <div class="caption">(1) Neal (2011)</div>
+                    </div>
+                    <div class="col-span-1 flex flex-col flex-grow">
+                        <div class="flex-grow bg-contain bg-center bg-no-repeat" style="background-image: url('images/hmc/mcmc.svg')"></div>
+                        <div class="caption">A view of one dimension of a 100-dimensional Gaussian sampled with HMC.</div>
                     </div>
                 </div>
-                <div class="mt-auto text-sm lg:text-lg text-right">Neal (2011)</div>
+
             </div>
 
         </section>
@@ -673,19 +678,22 @@
         </section>
 
         <section class="h-full">
-            <div class="container flex flex-col h-full mx-auto">
+            <div class="container flex flex-col h-full mx-auto pb-4">
                 <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Hamiltonian Monte Carlo (HMC)</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
-                <div class="flex flex-grow grid grid-cols-1 lg:grid-cols-2">
+                <div class="flex flex-grow grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
                     <div class="col-span-1 flex flex-grow">
                         <ul class="flex flex-col flex-grow justify-evenly ricker-list-sm lg:ricker-list text-lg lg:text-4xl">
                             <li>HMC uses <span class="emph">Hamiltonian Mechanics</span> and <span class="emph">gradient information</span> of the posterior distribution to draw samples that are less correlated.</li>
                             <li>This results in an algorithm that can handle <span class="emph">higher dimensions</span> and <span class="emph">converges in fewer samples</span>.</li>
                         </ul>
                     </div>
-                    <div class="col-span-1"></div>
+                    <div class="col-span-1 flex flex-col flex-grow">
+                        <div class="flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/hmc/hmc.svg')"></div>
+                        <div class="caption">A view of one dimension of a 100-dimensional Gaussian sampled with HMC.</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -939,14 +947,14 @@
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">The No-U-Turn Sampler</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
-                </div>
-            </div>
-        </section>
+<!--        <section>-->
+<!--            <div class="container flex mx-auto">-->
+<!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
+<!--                    <div class="header text-2xl lg:text-5xl">The No-U-Turn Sampler</div>-->
+<!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
 
         <section class="h-full">
             <div class="container flex flex-col mx-auto h-full pb-4">
