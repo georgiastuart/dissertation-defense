@@ -575,7 +575,7 @@
                                  style="background-image: url('images/nn/ref.png')"></div>
 
                             <!--                            <img class="w-full" src="images/nn/ref.png">-->
-                            <div class="caption">Flat layered experimental setup with nine unknowns<br>(Stuart et al.
+                            <div class="caption">Flat layered experimental setup with nine unknowns (Stuart et al.
                                 2019a)
                             </div>
                         </div>
@@ -1037,6 +1037,59 @@
                     receivers (green triangles) and red lines to mark the location of the vertical slices
                     (next slide). Middle: The initial velocity
                     field. Bottom: the median velocity field.
+                </div>
+            </div>
+        </section>
+
+        <section class="h-full">
+            <div class="container flex flex-col h-full mx-auto">
+                <div class=" flex ">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Numerical Experiment: NUTS</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <div class="flex flex-grow flex-col">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 flex-grow">
+                        <div class="col-span-1 flex flex-col flex-grow">
+                            <div class="flex-grow bg-contain bg-center bg-no-repeat"
+                                 style="background-image: url('images/residual_comparison.svg')"></div>
+                            <p class="caption">Relative residual plots for leapfrog step number 1 (blue), 10 (orange), 50 (green), and the NUTS
+                            algorithm (red).</p>
+                        </div>
+                        <div class="col-span-1 flex flex-grow">
+                            <ul class="ricker-list-sm lg:ricker-list flex-col flex flex-grow justify-evenly text-xl lg:text-4xl">
+                                <li>We find that the NUTS algorithm <span class="emph">results in superior residual decrease</span> while
+                                maintaining a <span class="emph">high acceptance rate</span>.</li>
+                                <li>
+                                    <table>
+                                        <tr>
+                                            <th>Leapfrog Steps</th>
+                                            <th>Acceptance Rate</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>0.72</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>0.66</td>
+                                        </tr>
+                                        <tr>
+                                            <td>50</td>
+                                            <td>0.35</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NUTS</td>
+                                            <td>0.98</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
