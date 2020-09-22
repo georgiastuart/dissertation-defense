@@ -541,12 +541,20 @@
         <!--            </div>-->
         <!--        </section>-->
 
-        <section>
-            <div class="container flex mx-auto">
+        <section class="h-full">
+            <div class="container flex flex-col h-full mx-auto">
                 <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                     <div class="header text-2xl lg:text-5xl">Neural Network Filter</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
+
+                        <ul class="ricker-list-sm lg:ricker-list flex flex-col space-y-10 text-xl lg:text-4xl pt-4">
+                            <li>The <span class="emph">likelihood function</span> is:
+                                \[\exp \left(-\frac{\lVert F(\theta) - D \rVert^2}{2\sigma^2}\right)\]
+                            </li>
+                            <li>Idea: replace the <span class="emph">likelihood exponent</span> with a neural network.</li>
+                        </ul>
+
             </div>
         </section>
 
