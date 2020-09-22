@@ -81,19 +81,25 @@
                     <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 flex-grow flex">
-                    <div class="flex flex-col flex-grow col-span-1" >
-                    <div class="flex-grow  bg-contain bg-no-repeat bg-center" style="background-image: url('images/rec_data.svg')"></div>
-                        <div class="caption">Synthetic receiver data with a \(t^2\) gain applied to emphasize the later events.</div>
+                    <div class="flex flex-col flex-grow col-span-1">
+                        <div class="flex-grow  bg-contain bg-no-repeat bg-center"
+                             style="background-image: url('images/rec_data.svg')"></div>
+                        <div class="caption">Synthetic receiver data with a \(t^2\) gain applied to emphasize the later
+                            events.
+                        </div>
                     </div>
                     <div class="flex flex-grow col-span-1">
                         <ul class="ricker-list-sm lg:ricker-list flex flex-grow flex-col justify-evenly text-xl lg:text-4xl">
-                            <li>In <span class="emph">Full Waveform Inversion (FWI)</span>, the goal is to <span class="emph">minimize</span>
-                            an objective function, e.g.:
-                            \[\frac{1}{2}\lVert F(\theta) - D\rVert^2\]
-                                where <span class="emph">\(\theta\)</span> describes the velocity field, <span class="emph">\(D\)</span> is the observed seismic data, and <span class="emph">\(F\)</span> is the wave solver.
+                            <li>In <span class="emph">Full Waveform Inversion (FWI)</span>, the goal is to <span
+                                    class="emph">minimize</span>
+                                an objective function, e.g.:
+                                \[\frac{1}{2}\lVert F(\theta) - D\rVert^2\]
+                                where <span class="emph">\(\theta\)</span> describes the velocity field, <span
+                                        class="emph">\(D\)</span> is the observed seismic data, and <span class="emph">\(F\)</span>
+                                is the wave solver.
                             </li>
                             <li>We use the <span class="emph">2D constant-density acoustic wave equation</span>:
-                            \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \Delta p = f\]
+                                \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \Delta p = f\]
                             </li>
                         </ul>
                     </div>
@@ -110,9 +116,12 @@
                     </div>
                 </div>
                 <div class="flex flex-grow flex-col">
-                    <div class="flex-grow bg-center bg-no-repeat bg-contain" style="background-image: url('images/pressure.gif')"></div>
-                    <div class="caption">Left: an acoustic wave propagating through the velocity field on the right. Center: Receiver data by time.
-                        Right: the velocity profile.</div>
+                    <div class="flex-grow bg-center bg-no-repeat bg-contain"
+                         style="background-image: url('images/pressure.gif')"></div>
+                    <div class="caption">Left: an acoustic wave propagating through the velocity field on the right.
+                        Center: Receiver data by time.
+                        Right: the velocity profile.
+                    </div>
                 </div>
             </div>
         </section>
@@ -185,7 +194,8 @@
                 <ul class="flex flex-col flex-grow justify-around lg:justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
                     <li>We assume the <span class="emph">likelihood function</span> has the form
                         \[\pi(D \vert \theta) = \exp \left( -\frac{\lVert F(\theta) - D\rVert^2}{2 \sigma^2} \right)\]
-                        where \(F(\theta)\) is the simulated data, \(D\) is the observed data, and \(\sigma\) is the precision parameter.
+                        where \(F(\theta)\) is the simulated data, \(D\) is the observed data, and \(\sigma\) is the
+                        precision parameter.
                     </li>
                     <li>The <span class="emph">prior distribution</span> can take many forms, e.g. uniform or Gaussian.
                     </li>
@@ -279,9 +289,9 @@
                             </li>
                             <li>A single chain can take <span class="emph">a week or more</span> on a cluster.</li>
                             <li>Often <span class="emph">80% to 90%</span> of the samples are rejected!</li>
-<!--                                                        <li>Proposed solution: use an approximate solution to <span class="emph">quickly reject unacceptable samples</span>, then-->
-<!--                                                            simulate on the full fine grid only if the sample is accepted using the surrogate.<sup class="small">1</sup>-->
-<!--                                                        </li>-->
+                            <!--                                                        <li>Proposed solution: use an approximate solution to <span class="emph">quickly reject unacceptable samples</span>, then-->
+                            <!--                                                            simulate on the full fine grid only if the sample is accepted using the surrogate.<sup class="small">1</sup>-->
+                            <!--                                                        </li>-->
                         </ul>
                     </div>
                     <div class="flex flex-col flex-grow col-span-1">
@@ -290,8 +300,8 @@
                         <div class="attribution">GNOME Project / CC BY-SA. Remixed.</div>
                     </div>
                 </div>
-<!--                                <div class="text-sm lg:text-lg lg:text-right">(1) Efendiev et al. (2006), Christen and Fox (2005)-->
-<!--                                </div>-->
+                <!--                                <div class="text-sm lg:text-lg lg:text-right">(1) Efendiev et al. (2006), Christen and Fox (2005)-->
+                <!--                                </div>-->
             </div>
         </section>
 
@@ -340,9 +350,9 @@
                 <div class="citation pt-4">Efendiev et al. (2006), Christen and Fox (2005)</div>
 
             </div>
-                                </section>
+        </section>
 
-                                <!--        <section>-->
+        <!--        <section>-->
         <!--            <div class="container flex mx-auto">-->
         <!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
         <!--                    <div class="header text-2xl lg:text-5xl">Choice of Filters</div>-->
@@ -362,9 +372,9 @@
                 <div class="flex flex-grow">
                     <ul class="ricker-list-sm lg:ricker-list flex-col flex justify-evenly text-lg lg:text-4xl text-left">
                         <li>Modeling wave propagation can be <span class="emph">computationally expensive</span>.</li>
-<!--                        <li>We use the 2D constant-density acoustic wave equation-->
-<!--                            \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]-->
-<!--                        </li>-->
+                        <!--                        <li>We use the 2D constant-density acoustic wave equation-->
+                        <!--                            \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]-->
+                        <!--                        </li>-->
                         <li><span class="emph">Operator upscaling</span><sup class="small">1</sup> decomposes the
                             solution into
                             two parts:
@@ -548,13 +558,58 @@
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
 
-                        <ul class="ricker-list-sm lg:ricker-list flex flex-col space-y-10 text-xl lg:text-4xl pt-4">
-                            <li>The <span class="emph">likelihood function</span> is:
-                                \[\exp \left(-\frac{\lVert F(\theta) - D \rVert^2}{2\sigma^2}\right)\]
-                            </li>
-                            <li>Idea: replace the <span class="emph">likelihood exponent</span> with a neural network.</li>
-                        </ul>
+                <ul class="ricker-list-sm lg:ricker-list flex flex-col space-y-10 text-xl lg:text-4xl pt-4">
+                    <li>The <span class="emph">likelihood function</span> is:
+                        \[\exp \left(-\frac{\lVert F(\theta) - D \rVert^2}{2\sigma^2}\right)\]
+                        where \(\theta\) is the velocity field, \(F(\theta)\) is the simulated data, and \(D\) is the
+                        observed data.
+                    </li>
+                    <li>Idea: replace the <span class="emph">likelihood exponent</span> with a neural network.</li>
+                </ul>
+                <div class="flex-grow bg-center bg-contain bg-no-repeat"
+                     style="background-image: url('images/nn_flowchart.svg')"></div>
 
+            </div>
+        </section>
+
+        <section class="h-full">
+            <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Pros and Cons of the Neural Network
+                        </div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 flex flex-grow lg:gap-4 pt-4">
+                    <div class="col-span-1 flex flex-col flex-grow fragment">
+                        <div class="flex flex-col flex-grow p-4 m-4 card">
+                            <div class="header border-b-2 pb-4">Pros</div>
+
+                            <ul class="flex flex-col flex-grow justify-evenly ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-lg lg:text-4xl">
+                            <li>Evaluating a model is <span class="emph">extremely fast (< 1 second)</span>.
+                            </li>
+                            <li>Neural networks are capable of approximating <span class="emph">very complex relationships</span>.
+                            </li>
+                            <li>Data for training can be generated <span class="emph">as part of the MCMC process</span>.</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex flex-col flex-grow">
+                        <div class="flex flex-col flex-grow p-4 m-4 card fragment">
+
+                        <div class="header border-b-2 pb-4">Cons</div>
+
+                        <ul class="flex flex-col flex-grow justify-evenly ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-lg lg:text-4xl">
+                            <li>Where's the <span class="emph">physics</span>?</li>
+                            <li>Training data is <span class="emph">expensive</span> to generate
+                            </li>
+                            <li>Predictions are not always very accurate <span class="emph">very complex relationships</span>.</li>
+                            <li>Many <span class="emph">knobs to twist</span> in the neural network!</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1062,13 +1117,16 @@
                         <div class="col-span-1 flex flex-col flex-grow">
                             <div class="flex-grow bg-contain bg-center bg-no-repeat"
                                  style="background-image: url('images/residual_comparison.svg')"></div>
-                            <p class="caption">Relative residual plots for leapfrog step number 1 (blue), 10 (orange), 50 (green), and the NUTS
-                            algorithm (red).</p>
+                            <p class="caption">Relative residual plots for leapfrog step number 1 (blue), 10 (orange),
+                                50 (green), and the NUTS
+                                algorithm (red).</p>
                         </div>
                         <div class="col-span-1 flex flex-grow">
                             <ul class="ricker-list-sm lg:ricker-list flex-col flex flex-grow justify-evenly text-xl lg:text-4xl">
-                                <li>We find that the NUTS algorithm <span class="emph">results in superior residual decrease</span> while
-                                maintaining a <span class="emph">high acceptance rate</span>.</li>
+                                <li>We find that the NUTS algorithm <span class="emph">results in superior residual decrease</span>
+                                    while
+                                    maintaining a <span class="emph">high acceptance rate</span>.
+                                </li>
                                 <li>
                                     <table>
                                         <tr>
@@ -1183,9 +1241,13 @@
                     </div>
                 </div>
                 <ul class="flex-grow flex flex-col justify-evenly ricker-list-sm  lg:ricker-list text-left text-4xl">
-                    <li>We recently <span class="emph">extended the two-stage HMC framework to the NUTS algorithm</span>.</li>
-                    <li>Currently in progress: a paper on <span class="emph">neural-network enhanced two-stage HMC and NUTS</span>.</li>
-                    <li>NNHMC/NNNUTS on larger-scale problems with <span class="emph">tens of thousands of unknowns</span>.</li>
+                    <li>We recently <span class="emph">extended the two-stage HMC framework to the NUTS algorithm</span>.
+                    </li>
+                    <li>Currently in progress: a paper on <span class="emph">neural-network enhanced two-stage HMC and NUTS</span>.
+                    </li>
+                    <li>NNHMC/NNNUTS on larger-scale problems with <span
+                            class="emph">tens of thousands of unknowns</span>.
+                    </li>
                     <li>Applying our methods to <span class="emph">real data</span>.</li>
                 </ul>
             </div>
