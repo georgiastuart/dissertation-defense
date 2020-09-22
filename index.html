@@ -1166,12 +1166,20 @@
             </div>
         </section>
 
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">Future Work</div>
-                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+        <section class="h-full">
+            <div class="container flex flex-col h-full mx-auto pb-4">
+                <div class=" flex ">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Future Work</div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
                 </div>
+                <ul class="flex-grow flex flex-col justify-evenly ricker-list-sm  lg:ricker-list text-left text-4xl">
+                    <li>We recently <span class="emph">extended the two-stage HMC framework to the NUTS algorithm</span>.</li>
+                    <li>Currently in progress: a paper on <span class="emph">neural-network enhanced two-stage HMC and NUTS</span>.</li>
+                    <li>NNHMC/NNNUTS on larger-scale problems with <span class="emph">tens of thousands of unknowns</span>.</li>
+                    <li>Applying our methods to <span class="emph">real data</span>.</li>
+                </ul>
             </div>
         </section>
 
