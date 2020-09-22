@@ -73,28 +73,50 @@
                 </div>
             </div>
         </section>
+
         <section class="h-full">
-            <div class="container mx-auto flex flex-col h-full overflow-y-auto">
+            <div class="container flex flex-col mx-auto h-full pb-4">
+                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                    <div class="header text-2xl lg:text-5xl">Full Waveform Inversion (FWI)</div>
+                    <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 flex-grow flex">
+                    <div class="flex flex-col flex-grow col-span-1" >
+                    <div class="flex-grow  bg-contain bg-no-repeat bg-center" style="background-image: url('images/rec_data.svg')"></div>
+                        <div class="caption">Synthetic receiver data with a \(t^2\) gain applied to emphasize the later events.</div>
+                    </div>
+                    <div class="flex flex-grow col-span-1">
+                        <ul class="ricker-list-sm lg:ricker-list flex flex-grow flex-col justify-evenly text-xl lg:text-4xl">
+                            <li>In <span class="emph">Full Waveform Inversion (FWI)</span>, the goal is to <span class="emph">minimize</span>
+                            an objective function, e.g.:
+                            \[\frac{1}{2}\lVert F(\theta) - D\rVert^2\]
+                                where <span class="emph">\(\theta\)</span> describes the velocity field, <span class="emph">\(D\)</span> is the observed seismic data, and <span class="emph">\(F\)</span> is the wave solver.
+                            </li>
+                            <li>We use the <span class="emph">2D constant-density acoustic wave equation</span>:
+                            \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \Delta p = f\]
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full overflow-y-auto pb-4">
                 <div class=" flex ">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
                         <div class="header text-2xl lg:text-5xl">Wave Data</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
-                <div class="flex flex-grow items-center">
-                    <img class="w-full" src="images/pressure.gif">
+                <div class="flex flex-grow flex-col">
+                    <div class="flex-grow bg-center bg-no-repeat bg-contain" style="background-image: url('images/pressure.gif')"></div>
+                    <div class="caption">Left: an acoustic wave propagating through the velocity field on the right. Center: Receiver data by time.
+                        Right: the velocity profile.</div>
+                </div>
+            </div>
+        </section>
 
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container flex mx-auto">
-                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">Full Waveform Inversion (FWI)</div>
-                    <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
-                </div>
-            </div>
-        </section>
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col">
                 <div class="flex">
@@ -163,7 +185,7 @@
                 <ul class="flex flex-col flex-grow justify-around lg:justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
                     <li>We assume the <span class="emph">likelihood function</span> has the form
                         \[\pi(D \vert \theta) = \exp \left( -\frac{\lVert F(\theta) - D\rVert^2}{2 \sigma^2} \right)\]
-                        where \(F(\theta)\) is the simulated data.
+                        where \(F(\theta)\) is the simulated data, \(D\) is the observed data, and \(\sigma\) is the precision parameter.
                     </li>
                     <li>The <span class="emph">prior distribution</span> can take many forms, e.g. uniform or Gaussian.
                     </li>
@@ -257,9 +279,9 @@
                             </li>
                             <li>A single chain can take <span class="emph">a week or more</span> on a cluster.</li>
                             <li>Often <span class="emph">80% to 90%</span> of the samples are rejected!</li>
-                            <!--                            <li>Proposed solution: use an approximate solution to <span class="emph">quickly reject unacceptable samples</span>, then-->
-                            <!--                                simulate on the full fine grid only if the sample is accepted using the surrogate.<sup class="small">1</sup>-->
-                            <!--                            </li>-->
+<!--                                                        <li>Proposed solution: use an approximate solution to <span class="emph">quickly reject unacceptable samples</span>, then-->
+<!--                                                            simulate on the full fine grid only if the sample is accepted using the surrogate.<sup class="small">1</sup>-->
+<!--                                                        </li>-->
                         </ul>
                     </div>
                     <div class="flex flex-col flex-grow col-span-1">
@@ -268,8 +290,8 @@
                         <div class="attribution">GNOME Project / CC BY-SA. Remixed.</div>
                     </div>
                 </div>
-                <!--                <div class="text-sm lg:text-lg lg:text-right">(1) Efendiev et al. (2006), Christen and Fox (2005)-->
-                <!--                </div>-->
+<!--                                <div class="text-sm lg:text-lg lg:text-right">(1) Efendiev et al. (2006), Christen and Fox (2005)-->
+<!--                                </div>-->
             </div>
         </section>
 
@@ -315,10 +337,12 @@
                              style="background-image: url('images/twosmcmcflowchart.svg')"></div>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="citation pt-4">Efendiev et al. (2006), Christen and Fox (2005)</div>
 
-        <!--        <section>-->
+            </div>
+                                </section>
+
+                                <!--        <section>-->
         <!--            <div class="container flex mx-auto">-->
         <!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
         <!--                    <div class="header text-2xl lg:text-5xl">Choice of Filters</div>-->
@@ -338,9 +362,9 @@
                 <div class="flex flex-grow">
                     <ul class="ricker-list-sm lg:ricker-list flex-col flex justify-evenly text-lg lg:text-4xl text-left">
                         <li>Modeling wave propagation can be <span class="emph">computationally expensive</span>.</li>
-                        <li>We use the 2D constant-density acoustic wave equation
-                            \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]
-                        </li>
+<!--                        <li>We use the 2D constant-density acoustic wave equation-->
+<!--                            \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \nabla p = f\]-->
+<!--                        </li>-->
                         <li><span class="emph">Operator upscaling</span><sup class="small">1</sup> decomposes the
                             solution into
                             two parts:
@@ -358,7 +382,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="caption">(1) Vdovina et al. (2005), Korostyshevskaya and
+                <div class="citation">(1) Vdovina et al. (2005), Korostyshevskaya and
                     Minkoff (2006), Vdovina and Minkoff (2008)
                 </div>
             </div>
@@ -659,7 +683,7 @@
                                     class="emph">correlated</span>.<sup class="small">1</sup>
                             </li>
                         </ul>
-                        <div class="caption">(1) Neal (2011)</div>
+                        <div class="citation">(1) Neal (2011)</div>
                     </div>
                     <div class="col-span-1 flex flex-col flex-grow">
                         <div class="flex-grow bg-contain bg-center bg-no-repeat"
@@ -782,7 +806,7 @@
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
                 <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                    <div class="header text-2xl lg:text-5xl">HMC Flowchart</div>
+                    <div class="header text-2xl lg:text-5xl">The Leapfrog Discretization</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
                 <div class="r-stack flex flex-grow">

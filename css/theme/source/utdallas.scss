@@ -179,9 +179,21 @@ button.btn {
   font-size: 1.5rem;
   color: $utdgreen;
   text-align: center;
+
+  &::before {
+    content: "Figure: ";
+    color: $utdorange;
+  }
+}
+
+.citation {
+  font-size: 1.5rem;
+  color: $utdgreen;
+  text-align: center;
 }
 
 .attribution {
-  @extend .caption;
+  color: $utdgreen;
+  text-align: center;
   font-size: 0.75rem;
 }

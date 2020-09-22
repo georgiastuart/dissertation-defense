@@ -101,6 +101,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.8.6",
+    "decktape": "^3.1.0",
     "os": "^0.1.1",
     "tty": "^1.0.1"
   }
