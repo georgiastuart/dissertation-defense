@@ -252,6 +252,7 @@
                             <button class="btn text-xl" id="mcmcstart">Start</button>
                             <button class="btn text-xl" id="mcmcstop">Stop</button>
                             <button class="btn text-xl" id="mcmcreset">Reset</button>
+                            <button class="btn text-xl" id="mcmcspeed">Toggle Speed</button>
                         </div>
                     </div>
                     <div class="flex flex-grow col-span-1 text-lg lg:text-4xl">
@@ -261,8 +262,6 @@
                             <img src="images/mcmcflowchart.svg" class="w-full fragment current-visible"
                                  data-fragment-index="0">
                         </div>
-                        <!--                        <div class="flex flex-grow bg-no-repeat bg-contain bg-center" style="background-image: url('images/mcmcflowchart.svg')">-->
-                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -890,8 +889,14 @@
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
                 <div class="flex flex-grow grid grid-cols-1 lg:grid-cols-2 pt-4">
-                    <div class="flex flex-grow col-span-1">
-                        <div class="flex-grow" id="hmcdemo"></div>
+                    <div class="flex flex-grow flex-col col-span-1">
+                        <div id="hmc-demo"></div>
+                        <div class="pt-4 flex justify-evenly">
+                            <button class="btn text-xl" id="hmcstart">Start</button>
+                            <button class="btn text-xl" id="hmcstop">Stop</button>
+                            <button class="btn text-xl" id="hmcreset">Reset</button>
+                            <button class="btn text-xl" id="hmcspeed">Toggle Speed</button>
+                        </div>
                     </div>
                     <div class="flex flex-grow col-span-1">
                         <div class="flex flex-grow bg-center bg-contain bg-no-repeat"

@@ -55,6 +55,23 @@ export function banana(y, x) {
 
 }
 
+export function log_banana(y, x) {
+    let a = 1.0, b = 1.0, cov = 0.9, k = 2.0, variance = 1.0;
+    let xHat = a * x;
+    let yHat = y / a - b * (Math.pow(xHat, 2) + Math.pow(a, 2))
+
+    return 0.5 * (xHat * (cov * yHat + variance * xHat) + yHat * (cov * xHat + variance * yHat))
+}
+
+export function log_banana_gradient(y, x) {
+    let a = 1.0, b = 1.0, cov = 0.9, k = 2.0, variance = 1.0;
+    let xHat = a * x;
+    let yHat = y / a - b * (Math.pow(xHat, 2) + Math.pow(a, 2))
+
+    return {x: cov * (-3 * xHat * xHat + y  - 1) + variance * xHat * (2 * xHat * xHat - 2 * y + 3),
+            y: cov * xHat - variance * (xHat*xHat - y + 1) }
+}
+
 // Standard Normal variate using Box-Muller transform.
 // https://stackoverflow.com/questions/25582882/javascript-math-random-normal-distribution-gaussian-bell-curve
 function randn_bm() {
