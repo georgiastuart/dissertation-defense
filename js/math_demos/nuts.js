@@ -15,7 +15,7 @@ export default function (contourmap, distribution) {
 
     let coords = [{x: 0, y: 4}];
 
-    let svg = d3.select("#hmc-demo")
+    let svg = d3.select("#nuts-demo")
         .append("svg")
         .attr("viewBox", [0, 0, cw, ch])
         .attr("width", w + 2 * margin)
@@ -78,31 +78,12 @@ export default function (contourmap, distribution) {
         mx -= 0.5 * epsilon * grad.x;
         my -= 0.5 * epsilon * grad.y;
 
-        let path = [];
-        svg.selectAll("#leapfrogPath")
-            .remove();
-
-        await new Promise((accept) => setTimeout(accept, delay / 4));
+        // await new Promise((accept) => setTimeout(accept, delay / 4));
 
 
         for (let i = 0; i < L; i++) {
             qx += epsilon * mx;
             qy += epsilon * my;
-
-            path.push({x: qx, y: qy});
-
-            svg.selectAll("#leapfrogPath")
-                .data(path)
-                .enter()
-                .append("circle")
-                .attr('cx', (d) => xScale(d.x))
-                .attr('cy', (d) => yScale(d.y))
-                .attr("r", radius / 4)
-                .attr("id", "leapfrogPath")
-                .style("fill", "purple")
-                .style("fill-opacity", 1);
-
-            await new Promise((accept) => setTimeout(accept, delay / 4));
 
 
             if (i < L - 1) {
@@ -116,7 +97,117 @@ export default function (contourmap, distribution) {
         mx -= 0.5 * epsilon * grad.x;
         my -= 0.5 * epsilon * grad.y;
 
-        return {position: {x: qx, y: qy}, momentum: {x: -mx, y: -my}};
+        return {position: {x: qx, y: qy}, momentum: {x: mx, y: my}};
+    }
+
+    let nuts = async (q, p, epsilon) => {
+        let build_tree = async (q, p, u, v, j, epsilon) => {
+            if (j === 0) {
+                let result = await leapfrog(p, q, epsilon * v, 1, log_banana_gradient);
+                let value = -log_banana(result.position.y, result.position.x) - 0.5 * (result.momentum.x * result.momentum.x + result.momentum.y * result.momentum.y);
+                let n_prime =  (u < Math.exp(value)) | 0;
+                let s_prime =  (value > Math.log(u) - 1000) | 0;
+                console.log("value", value, u, n_prime, s_prime);
+
+                svg.append("circle")
+                    .attr('cx', xScale(result.position.x))
+                    .attr('cy', yScale(result.position.y))
+                    .attr("r", radius / 4)
+                    .attr("id", "leapfrogPath")
+                    .style("fill", n_prime ? "green" : "red")
+                    .style("fill-opacity", 1);
+
+                await new Promise((accept) => setTimeout(accept, delay / 4));
+
+                return [{...result.position}, {...result.momentum},
+                        {...result.position}, {...result.momentum},
+                        {...result.position}, n_prime, s_prime]
+            } else {
+                let result = await build_tree(q, p, u, v, j - 1, epsilon);
+                let q_neg = result[0], p_neg = result[1];
+                let q_pos = result[2], p_pos = result[3];
+                let q_prime = result[4];
+                let n_prime = result[5];
+                let s_prime = result[6];
+                let q_2prime, n_2prime, s_2prime;
+
+                console.log("sprime outside", s_prime);
+
+
+                if (s_prime === 1) {
+                    if (v === -1) {
+                        result = await build_tree(q_neg, p_neg, u, v, j - 1, epsilon);
+                        q_neg = result[0], p_neg = result[1];
+                        q_2prime = result[4], n_2prime = result[5], s_2prime = result[6];
+                    } else {
+                        result = await build_tree(q_pos, p_pos, u, v, j - 1, epsilon);
+                        q_pos = result[2], p_pos = result[3];
+                        q_2prime = result[4], n_2prime = result[5], s_2prime = result[6];
+                    }
+
+                    if (Math.random() < (n_2prime / (n_prime + n_2prime))) {
+                        q_prime = {...q_2prime}
+                    }
+
+                    svg.select("#currentacc")
+                        .remove()
+                        .append("circle")
+                        .
+
+                    s_prime = s_2prime * ((q_pos.x - q_neg.x) * p_neg.x + (q_pos.y - q_neg.y) * p_neg.y >= 0) * ((q_pos.x - q_neg.x) * p_pos.x + (q_pos.y - q_neg.y) * p_pos.y >= 0);
+                    console.log("sprime", s_prime);
+                    n_prime = n_prime + n_2prime;
+                }
+
+                return [{...q_neg}, {...p_neg}, {...q_pos}, {...p_pos}, {...q_prime}, n_prime, s_prime];
+            }
+        }
+
+        let accept = false;
+        let q_neg = {...q}, q_pos = {...q};
+        let p_neg = {...p}, p_pos = {...p};
+        let q_m = {...q};
+        let u = Math.random() * Math.exp(-log_banana(q.y, q.x) - 0.5 * (p.x * p.x + p.y * p.y));
+        let result, q_prime;
+
+        let j = 0, n = 1, s = 1, v = 1, n_prime, s_prime;
+
+        while ((s === 1) && (j < 10)) {
+            if (Math.random() < 0.5) {
+                v = -1;
+            } else {
+                v = 1;
+            }
+
+            if (v === -1) {
+                result = await build_tree(q_neg, p_neg, u, v, j, epsilon);
+                q_neg = result[0];
+                p_neg = result[1];
+                q_prime = result[4];
+                n_prime = result[5];
+                s_prime = result[6];
+            } else {
+                result = await build_tree(q_pos, p_pos, u, v, j, epsilon);
+                q_pos = result[2];
+                p_pos = result[3];
+                q_prime = result[4];
+                n_prime = result[5];
+                s_prime = result[6];
+            }
+
+            console.log('Outside', s_prime, n_prime, n);
+
+            if ((s_prime === 1) && (Math.random() < n_prime / n)) {
+                accept = true;
+                q_m = {...q_prime}
+            }
+
+            n += n_prime;
+            s = s_prime * ((q_pos.x - q_neg.x) * p_neg.x + (q_pos.y - q_neg.y) * p_neg.y >= 0) * ((q_pos.x - q_neg.x) * p_pos.x + (q_pos.y - q_neg.y) * p_pos.y >= 0);
+            console.log("s", s);
+            j++;
+        }
+        return {position: q_m, accept: accept};
     }
 
     let mcmc = async () => {
@@ -139,6 +230,7 @@ export default function (contourmap, distribution) {
             .style("fill-opacity", 0.25);
 
 
+        svg.selectAll("#leapfrogPath").remove();
 
         let last_coord = coords[coords.length - 1];
         let momentum = {x: 0, y: 0};
@@ -165,31 +257,28 @@ export default function (contourmap, distribution) {
         //     .style("stroke", "#f5f5f5")
         //     .style("stroke-width", "0.5");
 
-        let result = leapfrog(momentum, last_coord, 0.2, 25, log_banana_gradient)
-
-        let acc_r = Math.exp(-1 * log_banana((await result).position.y, (await result).position.x) - ((await result).momentum.x * (await result).momentum.x + (await result).momentum.y * (await result).momentum.y) / 2
-            + log_banana(last_coord.y, last_coord.x) + (momentum.x * momentum.x + momentum.y * momentum.y) / 2)
-        let c = Math.random();
+        let result = await nuts(last_coord, momentum, 0.1)
+        accepted += result.accept | 0;
+        count++;
+        let acc_r = accepted / count;
 
         ap.text("Acc. prob.: " + Math.min(acc_r, 1).toFixed(3));
-        check.text("Check: " + c.toFixed(3));
 
         await new Promise((accept) => setTimeout(accept, delay));
 
 
-        if (c < (acc_r)) {
-            coords.push((await result).position);
+        if (result.accept) {
+            coords.push(result.position);
             svg.select("#proposed")
                 .style("fill", "green");
             accepted++;
             acc.text("Accepted?: True")
         } else {
-            coords.push(last_coord);
+            coords.push(result.position);
             svg.select("#proposed")
                 .style("fill", "red");
             acc.text("Accepted?: False")
         }
-        count++;
 
         ar.text("Acc. rate: " + (accepted / count).toFixed(3));
         await new Promise((accept) => setTimeout(accept, delay));
@@ -204,7 +293,7 @@ export default function (contourmap, distribution) {
         }
     };
 
-    d3.select("#hmcstart")
+    d3.select("#nutsstart")
         .on("click", () => {
             console.log("MCMC simulation started");
             stop = false;
@@ -213,13 +302,13 @@ export default function (contourmap, distribution) {
         });
 
 
-    d3.select("#hmcstop")
+    d3.select("#nutsstop")
         .on("click", () => {
             console.log("MCMC simulation stopped")
             stop = true;
         });
 
-    d3.select("#hmcreset")
+    d3.select("#nutsreset")
         .on("click", () => {
             console.log("resetting simulation");
             stop = true;
@@ -230,7 +319,7 @@ export default function (contourmap, distribution) {
             svg.selectAll("circle").remove();
         });
 
-    d3.select("#hmcspeed")
+    d3.select("#nutsspeed")
         .on("click", () => {
             if (delay === 1000) {
                 delay = 100;
@@ -239,23 +328,5 @@ export default function (contourmap, distribution) {
             }
             console.log("delay is now " + delay);
         });
-
-    // let xScale = d3.scaleLinear()
-    //     .domain([-3, 3])
-    //     .range([0, w / 2 - 50]);
-    //
-    // let xAxis = d3.axisBottom()
-    //     .scale(xScale);
-    //
-    // svg.append("g")
-    //     .attr("transform", "translate(25," + (h / 2.0 - 10) + ")")
-    //     .call(xAxis);
-
-
-    // svg.append("circle")
-    //     .attr("cx", w / 2)
-    //     .attr("cy", h / 2)
-    //     .attr("r", 25)
-    //     .style("fill", "purple");
 }
 
