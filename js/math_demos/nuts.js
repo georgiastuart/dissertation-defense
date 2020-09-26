@@ -146,15 +146,18 @@ export default function (contourmap, distribution) {
                     }
 
                     if (Math.random() < (n_2prime / (n_prime + n_2prime))) {
+                        console.log('ACCEPTED!')
                         q_prime = {...q_2prime}
+                    } else {
+                        console.log('REJECTED!')
                     }
 
-                    svg.select("#currentacc")
-                        .remove()
-                        .append("circle")
-                        .
+                    // svg.select("#currentacc")
+                    //     .remove()
+                    //     .append("circle")
+                    //     .
 
-                    s_prime = s_2prime * ((q_pos.x - q_neg.x) * p_neg.x + (q_pos.y - q_neg.y) * p_neg.y >= 0) * ((q_pos.x - q_neg.x) * p_pos.x + (q_pos.y - q_neg.y) * p_pos.y >= 0);
+                    s_prime = s_2prime * ((((q_pos.x - q_neg.x) * p_neg.x + (q_pos.y - q_neg.y) * p_neg.y >= 0) && ((q_pos.x - q_neg.x) * p_pos.x + (q_pos.y - q_neg.y) * p_pos.y >= 0)) | 0);
                     console.log("sprime", s_prime);
                     n_prime = n_prime + n_2prime;
                 }
@@ -203,8 +206,8 @@ export default function (contourmap, distribution) {
             }
 
             n += n_prime;
-            s = s_prime * ((q_pos.x - q_neg.x) * p_neg.x + (q_pos.y - q_neg.y) * p_neg.y >= 0) * ((q_pos.x - q_neg.x) * p_pos.x + (q_pos.y - q_neg.y) * p_pos.y >= 0);
-            console.log("s", s);
+            s = s_prime * ((((q_pos.x - q_neg.x) * p_neg.x + (q_pos.y - q_neg.y) * p_neg.y >= 0) && ((q_pos.x - q_neg.x) * p_pos.x + (q_pos.y - q_neg.y) * p_pos.y >= 0)) | 0);
+            console.log("s", s, ((q_pos.x - q_neg.x) * p_neg.x + (q_pos.y - q_neg.y) * p_neg.y >= 0), ((q_pos.x - q_neg.x) * p_pos.x + (q_pos.y - q_neg.y) * p_pos.y >= 0));
             j++;
         }
         return {position: q_m, accept: accept};
