@@ -191,7 +191,7 @@
                     </div>
                 </div>
 
-                <ul class="flex flex-col flex-grow justify-around lg:justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left">
+                <ul class="flex flex-col flex-grow justify-around lg:justify-center lg:space-y-16 ricker-list-sm lg:ricker-list text-left text-xl lg:text-4xl">
                     <li>We assume the <span class="emph">likelihood function</span> has the form
                         \[\pi(D \vert \theta) = \exp \left( -\frac{\lVert F(\theta) - D\rVert^2}{2 \sigma^2} \right)\]
                         where \(F(\theta)\) is the simulated data, \(D\) is the observed data, and \(\sigma\) is the
@@ -200,6 +200,29 @@
                     <li>The <span class="emph">prior distribution</span> can take many forms, e.g. uniform or Gaussian.
                     </li>
                     <li>However, the <span class="emph">posterior is not necessarily Gaussian</span>.
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full pb-4">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">The Acceptance Probability</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+
+                <ul class="flex flex-col flex-grow justify-evenly lg:justify-evenly lg:space-y-16 ricker-list-sm lg:ricker-list text-left text-xl lg:text-4xl">
+                    <li>The <span class="emph">acceptance probability</span> determines whether a sample is accepted or rejected.</li>
+                    <li>It's a <span class="emph">ratio</span> of the <span class="emph">posterior values, \(\pi(\theta \vert D)\)</span>:
+                    \[\rho(\theta, \theta_n) = \frac{\pi(\theta \vert D) g(\theta_n \vert \theta)}{\pi(\theta_n \vert D) g(\theta \vert \theta_n)}\]
+                        where \(\theta_n\) is the <span class="emph">previously accepted value</span> and \(g(\theta \vert \theta_n)\) is the <span class="emph">proposal distribution</span>.
+                    </li>
+                    <li>The sample, \(\theta\), is <span class="emph">accepted or rejected</span> with probability
+                    \[r(\theta, \theta_n) = \min\left\{1, \rho(\theta, \theta_n)\right\}\]
                     </li>
                 </ul>
 
@@ -351,14 +374,28 @@
             </div>
         </section>
 
-        <!--        <section>-->
-        <!--            <div class="container flex mx-auto">-->
-        <!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
-        <!--                    <div class="header text-2xl lg:text-5xl">Choice of Filters</div>-->
-        <!--                    <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </section>-->
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full pb-4">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">The Two-stage Acceptance Probability</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+
+                <ul class="flex flex-col flex-grow justify-evenly lg:justify-evenly lg:space-y-16 ricker-list-sm lg:ricker-list text-left text-xl lg:text-4xl my-4">
+                    <li>The acceptance probability for the <span class="emph">filter stage</span> is
+                    \[\rho(\theta, \theta_n) = \min \left\{1, \frac{\pi_F(\theta \vert D) g(\theta_n \vert \theta)}{\pi_F(\theta_n \vert D) g(\theta \vert \theta_n)}\right\}\]
+                        where \(\pi_F(\theta \vert D)\) is the <span class="emph">filter posterior distribution</span>.
+                    </li>
+                    <li>The filter distribution <span class="emph">becomes the proposal distribution</span> for the fine grid stage.</li>
+                    <li>The fine grid acceptance probability is
+                    \[\rho(\theta, \theta_n) = \min \left\{1, \frac{\pi(\theta \vert D) \pi_F(\theta_n \vert D)}{\pi(\theta_n \vert D) \pi_F(\theta \vert D)}\right\} \]
+                    </li>
+                </ul>
+
+            </div>
+        </section>
 
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full overflow-y-auto pb-4">
@@ -849,7 +886,7 @@
                 </div>
                 <ul class="ricker-list text-left text-xl lg:text-4xl flex flex-col flex-grow justify-evenly">
                     <li>The posterior distribution is embedded in the potential energy by way of the
-                        <span class="emph">canonical distribution</span>.
+                        <span class="emph">potential energy</span>.
                         \[U(q) = -\log [\pi(q \vert D)] = -\log[\pi(q)\pi(D \vert q)]\]
                         where \(\pi(q \vert D)\) is the <span class="emph">posterior distribution</span>,
                         \(\pi(q)\) is the <span class="emph">prior distribution</span>, and \(\pi(D \vert q)\)
