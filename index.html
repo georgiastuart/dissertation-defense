@@ -206,28 +206,7 @@
             </div>
         </section>
 
-        <section class="h-full">
-            <div class="container mx-auto flex flex-col h-full pb-4">
-                <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                        <div class="header text-2xl lg:text-5xl">The Acceptance Probability</div>
-                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
-                    </div>
-                </div>
 
-                <ul class="flex flex-col flex-grow justify-evenly lg:justify-evenly lg:space-y-16 ricker-list-sm lg:ricker-list text-left text-xl lg:text-4xl">
-                    <li>The <span class="emph">acceptance probability</span> determines whether a sample is accepted or rejected.</li>
-                    <li>It's a <span class="emph">ratio</span> of the <span class="emph">posterior values, \(\pi(\theta \vert D)\)</span>:
-                    \[\rho(\theta, \theta_n) = \frac{\pi(\theta \vert D) g(\theta_n \vert \theta)}{\pi(\theta_n \vert D) g(\theta \vert \theta_n)}\]
-                        where \(\theta_n\) is the <span class="emph">previously accepted value</span> and \(g(\theta \vert \theta_n)\) is the <span class="emph">proposal distribution</span>.
-                    </li>
-                    <li>The sample, \(\theta\), is <span class="emph">accepted or rejected</span> with probability
-                    \[r(\theta, \theta_n) = \min\left\{1, \rho(\theta, \theta_n)\right\}\]
-                    </li>
-                </ul>
-
-            </div>
-        </section>
 
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full pb-4">
@@ -290,6 +269,29 @@
             </div>
         </section>
 
+        <section class="h-full">
+            <div class="container mx-auto flex flex-col h-full pb-4">
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">The Acceptance Probability</div>
+                        <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+
+                <ul class="flex flex-col flex-grow justify-evenly lg:justify-evenly lg:space-y-16 ricker-list-sm lg:ricker-list text-left text-xl lg:text-4xl">
+                    <li>The <span class="emph">acceptance probability</span> determines whether a sample is accepted or rejected.</li>
+                    <li>It's a <span class="emph">ratio</span> of the <span class="emph">posterior values, \(\pi(\theta \vert D)\)</span>:
+                        \[\rho(\theta, \theta_n) = \frac{\pi(\theta \vert D) g(\theta_n \vert \theta)}{\pi(\theta_n \vert D) g(\theta \vert \theta_n)}\]
+                        where \(\theta_n\) is the <span class="emph">previously accepted value</span> and \(g(\theta \vert \theta_n)\) is the <span class="emph">proposal distribution</span>.
+                    </li>
+                    <li>The sample, \(\theta\), is <span class="emph">accepted or rejected</span> with probability
+                        \[r(\theta, \theta_n) = \min\left\{1, \rho(\theta, \theta_n)\right\}\]
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+        
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full pb-4">
                 <div class="flex">
