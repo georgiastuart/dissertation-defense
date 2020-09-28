@@ -94,12 +94,12 @@
                                     class="emph">minimize</span>
                                 an objective function, e.g.:
                                 \[\frac{1}{2}\lVert F(\theta) - D\rVert^2\]
-                                where <span class="emph">\(\theta\)</span> describes the velocity field, <span
+                                where <span class="emph">\(\theta\)</span> describes the subsurface (velocity, density, attenuation, etc.), <span
                                         class="emph">\(D\)</span> is the observed seismic data, and <span class="emph">\(F(\theta)\)</span>
                                 is the simulated seismic data.
                             </li>
                             <li>We use the <span class="emph">2D constant-density acoustic wave equation</span>:
-                                \[\frac{1}{c^2(x,z)}\frac{\partial^2 p}{\partial t^2} - \Delta p = f\]
+                                \[\frac{1}{c^2}\frac{\partial^2 p}{\partial t^2} - \Delta p = f\]
                             </li>
                         </ul>
                     </div>
@@ -186,7 +186,7 @@
             <div class="container mx-auto flex flex-col h-full pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                        <div class="header text-2xl lg:text-5xl">Markov chain Monte Carlo (MCMC)</div>
+                        <div class="header text-2xl lg:text-5xl">The Likelihood and Prior</div>
                         <img class="ml-auto h-24 hidden lg:block" src="images/utdmonogram.png">
                     </div>
                 </div>
@@ -291,7 +291,7 @@
 
             </div>
         </section>
-        
+
         <section class="h-full">
             <div class="container mx-auto flex flex-col h-full pb-4">
                 <div class="flex">
@@ -377,6 +377,7 @@
         </section>
 
         <section class="h-full">
+        <section class="h-full">
             <div class="container mx-auto flex flex-col h-full pb-4">
                 <div class="flex">
                     <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
@@ -397,6 +398,31 @@
                 </ul>
 
             </div>
+        </section>
+            <section class="pt-4 h-full flex flex-col flex-grow justify-center text-xl lg:text-3xl">
+                The detailed balance equation is
+                \[
+                \begin{align}
+                K(y, x) \pi(y) = K(x, y) \pi(x).
+                \end{align}
+                \]
+                We have
+                \[
+                \begin{align}
+                K(x, y) = &\rho(x, y)\mathcal{Q}(y\vert x) +\left(1 - \int\rho(x, y)\mathcal{Q}(y \vert x)dy\right)\delta_{x}(y)
+                \end{align}
+                \]
+                We follow Efendiev et al. (2006) to show detailed balance. For \(x=y\), the previous equation is trivial. For \(x \neq y\),
+                \[
+                \begin{align}
+                K(x, y)\pi(x) &= \rho(x, y)\mathcal{Q}(y \vert x) \pi(x) \\
+                &= \min\left\{1, \frac{\mathcal{Q}(x\vert y) \pi(y)}{\mathcal{Q}(y\vert x) \pi(x)} \right\} \mathcal{Q}(y\vert x) \pi(x) \\
+                &= \min \left\{\mathcal{Q}(y\vert x) \pi(x), \mathcal{Q}(x\vert y) \pi(y) \right\} \\
+                &= \min \left\{ \frac{\mathcal{Q}(y\vert x) \pi(x)}{\mathcal{Q}(x\vert y) \pi(y)}, 1\right\} \mathcal{Q}(x\vert y) \pi(y) \\
+                &= \rho(y, x) \mathcal{Q}(x\vert y) \pi(y) = K(y, x)\pi(y)
+                \end{align}
+                \]
+            </section>
         </section>
 
         <section class="h-full">
@@ -580,6 +606,36 @@
             </section>
         </section>
 
+        <section class="h-full">
+            <div class="container flex flex-col mx-auto h-full overflow-y-auto">
+
+                <div class="flex">
+                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
+                        <div class="header text-2xl lg:text-5xl">Convergence
+                        </div>
+                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 flex flex-grow">
+                    <div class="flex flex-grow col-span-1 lg:col-span-1">
+                        <div class="flex-col flex-grow flex">
+                            <div class="flex-grow bg-center bg-contain bg-no-repeat" style="background-image: url('images/flat_layer/rp.png')"></div>
+                            <div class="caption pb-4">The MPSRF and maximum PSRF values by position in the chain.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1 text-lg lg:text-4xl flex flex-grow items-center">
+                        <ul class=" ricker-list-sm lg:ricker-list space-y-4 lg:space-y-10 text-left ">
+                            <li class="">We monitor convergence with the <span class="emph">Potential Scale Reduction Factor (PSRF)</span>
+                            </li>
+                            <li class="">We find (for this experiment and six chains) that we require <span class="emph">50,000 samples per chain</span> (300,000 samples total)
+                                to see convergence.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--        <section>-->
         <!--            <div class="container flex mx-auto">-->
         <!--                <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
@@ -595,8 +651,10 @@
                     <div class="header text-2xl lg:text-5xl">Neural Network Filter</div>
                     <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
                 </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="col-span-1">
 
-                <ul class="ricker-list-sm lg:ricker-list flex flex-col space-y-10 text-xl lg:text-4xl pt-4">
+                <ul class="ricker-list-sm lg:ricker-list flex flex-col space-y-10 text-xl lg:text-3xl pt-4">
                     <li>The <span class="emph">likelihood function</span> is:
                         \[\exp \left(-\frac{\lVert F(\theta) - D \rVert^2}{2\sigma^2}\right)\]
                         where \(\theta\) is the velocity field, \(F(\theta)\) is the simulated data, and \(D\) is the
@@ -604,7 +662,12 @@
                     </li>
                     <li>Idea: replace the <span class="emph">likelihood exponent</span> with a neural network.</li>
                 </ul>
-                <div class="flex-grow bg-center bg-contain bg-no-repeat"
+                </div>
+                    <div class="col-span-1 flex flex-grow bg-contain bg-no-repeat bg-center" style="background-image: url('images/nn/neural_net.png')">
+
+                    </div>
+                </div>
+                <div class="flex-grow bg-center bg-contain bg-no-repeat pb-4"
                      style="background-image: url('images/nn_flowchart.svg')"></div>
 
             </div>
@@ -642,7 +705,7 @@
                             <li>Where's the <span class="emph">physics</span>?</li>
                             <li>Training data is <span class="emph">expensive</span> to generate
                             </li>
-                            <li>Predictions are not always very accurate <span class="emph">very complex relationships</span>.</li>
+                            <li>Predictions are not always very accurate for <span class="emph">very complex relationships</span>.</li>
                             <li>Many <span class="emph">knobs to twist</span> in the neural network!</li>
                         </ul>
                         </div>
@@ -685,26 +748,26 @@
             </div>
         </section>
 
-        <section class="h-full">
-            <div class="container mx-auto h-full flex flex-col pb-4">
-                <div class="flex">
-                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">
-                        <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>
-                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">
-                    </div>
-                </div>
-                <div class="flex flex-grow">
-                    <div class="flex flex-col flex-grow lg:space-y-10 space-y-4">
-                        <div class="flex-grow bg-center bg-contain bg-no-repeat"
-                             style="background-image: url('images/nn/testing_set.png');"></div>
-                        <!--                        <img class="w-full" src="images/nn/testing_set.png">-->
-                        <div class="caption">The fine grid residual norm vs. neural network filter residual
-                            norm with continuous learning.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!--        <section class="h-full">-->
+<!--            <div class="container mx-auto h-full flex flex-col pb-4">-->
+<!--                <div class="flex">-->
+<!--                    <div class="border-b-2 border-solid w-full text-left flex items-center pt-4 lg:pt-8">-->
+<!--                        <div class="header text-2xl lg:text-5xl">Results: Two-stage MCMC with Neural Net</div>-->
+<!--                        <img class="ml-auto h-20 hidden lg:block" src="images/utdmonogram.png">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="flex flex-grow">-->
+<!--                    <div class="flex flex-col flex-grow lg:space-y-10 space-y-4">-->
+<!--                        <div class="flex-grow bg-center bg-contain bg-no-repeat"-->
+<!--                             style="background-image: url('images/nn/testing_set.png');"></div>-->
+<!--                        &lt;!&ndash;                        <img class="w-full" src="images/nn/testing_set.png">&ndash;&gt;-->
+<!--                        <div class="caption">The fine grid residual norm vs. neural network filter residual-->
+<!--                            norm with continuous learning.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
 
         <section class="h-full">
             <div class="container mx-auto h-full flex flex-col overflow-y-auto pb-4">
