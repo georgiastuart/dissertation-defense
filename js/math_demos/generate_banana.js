@@ -44,7 +44,7 @@ export default function () {
     let max = Math.max(...values);
 
     let thresholds = Array.from({length: num_contours}, (_, i) => (max - min) / num_contours * i + min);
-    let color = d3.scaleSequential(d3.extent(thresholds), d3.interpolateRgb('#f5f5f5', 'orange'))
+    let color = d3.scaleSequential(d3.extent(thresholds), d3.interpolateRgb('#ffffff', 'orange'))
 
 
     let contours = d3.contours()

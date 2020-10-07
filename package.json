@@ -1,25 +1,21 @@
 {
-  "name": "reveal.js",
-  "version": "4.0.2",
-  "description": "The HTML Presentation Framework",
-  "homepage": "https://revealjs.com",
-  "subdomain": "revealjs",
-  "main": "dist/reveal.js",
-  "module": "dist/reveal.esm.js",
-  "license": "MIT",
+  "name": "dissertation-defense",
+  "version": "0.1",
+  "description": "Georgia K. Stuart's Dissertation Defense",
+  "license": "CC BY-NC-SA 4.0",
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
     "build": "gulp"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "https://hakim.se"
+    "name": "Georgia K. Stuart",
+    "email": "georgia.stuart@gmail.com",
+    "web": "https://www.georgiastuart.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/georgiastuart/dissertation-defense.git"
   },
   "engines": {
     "node": ">=10.0.0"
